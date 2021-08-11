@@ -1,0 +1,2341 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Cal3D - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x807 /fo".\Release/cal3d.res" /d "NDEBUG" "C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\cal3d.rc"" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPE90.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I ".." /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_USRDLL" /D "CAL3D_EXPORTS" /D "_MBCS" /Fo".\Release/" /GF /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\animation.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\animation_action.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\animation_cycle.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\bone.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\buffersource.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\cal3d_wrapper.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coreanimation.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\corebone.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\corekeyframe.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\corematerial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coremesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coremodel.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coremorphanimation.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coreskeleton.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coresubmesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coresubmorphtarget.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coretrack.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\error.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\global.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\hardwaremodel.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\loader.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\matrix.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\mesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\mixer.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\model.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\morphtargetmixer.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\physique.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\platform.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\quaternion.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\renderer.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\saver.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\skeleton.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\springsystem.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\streamsource.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\submesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\tinyxml.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\tinyxmlerror.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\tinyxmlparser.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\vector.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPE90.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPE91.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /incremental:no /pdb:".\Release\cal3d.pdb" /machine:I386 /out:"..\..\bin\Release/cal3d.dll" /implib:"..\..\bin\Release/cal3d.lib" /pdbtype:sept 
+".\Release\animation.obj"
+".\Release\animation_action.obj"
+".\Release\animation_cycle.obj"
+".\Release\bone.obj"
+".\Release\buffersource.obj"
+".\Release\cal3d_wrapper.obj"
+".\Release\coreanimation.obj"
+".\Release\corebone.obj"
+".\Release\corekeyframe.obj"
+".\Release\corematerial.obj"
+".\Release\coremesh.obj"
+".\Release\coremodel.obj"
+".\Release\coremorphanimation.obj"
+".\Release\coreskeleton.obj"
+".\Release\coresubmesh.obj"
+".\Release\coresubmorphtarget.obj"
+".\Release\coretrack.obj"
+".\Release\error.obj"
+".\Release\global.obj"
+".\Release\hardwaremodel.obj"
+".\Release\loader.obj"
+".\Release\matrix.obj"
+".\Release\mesh.obj"
+".\Release\mixer.obj"
+".\Release\model.obj"
+".\Release\morphtargetmixer.obj"
+".\Release\physique.obj"
+".\Release\platform.obj"
+".\Release\quaternion.obj"
+".\Release\renderer.obj"
+".\Release\saver.obj"
+".\Release\skeleton.obj"
+".\Release\springsystem.obj"
+".\Release\streamsource.obj"
+".\Release\submesh.obj"
+".\Release\tinyxml.obj"
+".\Release\tinyxmlerror.obj"
+".\Release\tinyxmlparser.obj"
+".\Release\vector.obj"
+".\Release\cal3d.res"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPE91.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+animation.cpp
+animation_action.cpp
+animation_cycle.cpp
+bone.cpp
+buffersource.cpp
+cal3d_wrapper.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\cal3d_wrapper.cpp(1023) : warning C4800: 'enum Boolean' : forcing value to bool 'true' or 'false' (performance warning)
+coreanimation.cpp
+corebone.cpp
+corekeyframe.cpp
+corematerial.cpp
+coremesh.cpp
+coremodel.cpp
+coremorphanimation.cpp
+coreskeleton.cpp
+coresubmesh.cpp
+coresubmorphtarget.cpp
+coretrack.cpp
+error.cpp
+global.cpp
+hardwaremodel.cpp
+Generating Code...
+Compiling...
+loader.cpp
+matrix.cpp
+mesh.cpp
+mixer.cpp
+model.cpp
+morphtargetmixer.cpp
+physique.cpp
+platform.cpp
+quaternion.cpp
+renderer.cpp
+saver.cpp
+skeleton.cpp
+springsystem.cpp
+streamsource.cpp
+submesh.cpp
+tinyxml.cpp
+tinyxmlerror.cpp
+tinyxmlparser.cpp
+vector.cpp
+Generating Code...
+Linking...
+   Creating library ..\..\bin\Release/cal3d.lib and object ..\..\bin\Release/cal3d.exp
+
+
+
+<h3>Results</h3>
+cal3d.dll - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Cal3D - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x807 /fo".\Debug/cal3d.res" /d "_DEBUG" "C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\cal3d.rc"" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP3515.tmp" with contents
+[
+/nologo /MDd /W3 /GX /ZI /Od /I ".." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_USRDLL" /D "CAL3D_EXPORTS" /D "_MBCS" /Fo".\Debug/" /Fd".\Debug/" /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\animation.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\animation_action.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\animation_cycle.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\bone.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\buffersource.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\cal3d_wrapper.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coreanimation.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\corebone.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\corekeyframe.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\corematerial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coremesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coremodel.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coremorphanimation.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coreskeleton.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coresubmesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coresubmorphtarget.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coretrack.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\error.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\global.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\hardwaremodel.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\loader.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\matrix.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\mesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\mixer.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\model.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\morphtargetmixer.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\physique.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\platform.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\quaternion.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\renderer.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\saver.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\skeleton.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\springsystem.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\streamsource.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\submesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\tinyxml.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\tinyxmlerror.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\tinyxmlparser.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\vector.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP3515.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP3516.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:".\Debug\cal3d.pdb" /debug /machine:I386 /out:"..\..\bin\Debug\cal3d_d.dll" /implib:"..\..\bin\Debug/cal3d_d.lib" /pdbtype:sept 
+".\Debug\animation.obj"
+".\Debug\animation_action.obj"
+".\Debug\animation_cycle.obj"
+".\Debug\bone.obj"
+".\Debug\buffersource.obj"
+".\Debug\cal3d_wrapper.obj"
+".\Debug\coreanimation.obj"
+".\Debug\corebone.obj"
+".\Debug\corekeyframe.obj"
+".\Debug\corematerial.obj"
+".\Debug\coremesh.obj"
+".\Debug\coremodel.obj"
+".\Debug\coremorphanimation.obj"
+".\Debug\coreskeleton.obj"
+".\Debug\coresubmesh.obj"
+".\Debug\coresubmorphtarget.obj"
+".\Debug\coretrack.obj"
+".\Debug\error.obj"
+".\Debug\global.obj"
+".\Debug\hardwaremodel.obj"
+".\Debug\loader.obj"
+".\Debug\matrix.obj"
+".\Debug\mesh.obj"
+".\Debug\mixer.obj"
+".\Debug\model.obj"
+".\Debug\morphtargetmixer.obj"
+".\Debug\physique.obj"
+".\Debug\platform.obj"
+".\Debug\quaternion.obj"
+".\Debug\renderer.obj"
+".\Debug\saver.obj"
+".\Debug\skeleton.obj"
+".\Debug\springsystem.obj"
+".\Debug\streamsource.obj"
+".\Debug\submesh.obj"
+".\Debug\tinyxml.obj"
+".\Debug\tinyxmlerror.obj"
+".\Debug\tinyxmlparser.obj"
+".\Debug\vector.obj"
+".\Debug\cal3d.res"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP3516.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+animation.cpp
+animation_action.cpp
+animation_cycle.cpp
+bone.cpp
+buffersource.cpp
+cal3d_wrapper.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\src\cal3d\cal3d_wrapper.cpp(1023) : warning C4800: 'enum Boolean' : forcing value to bool 'true' or 'false' (performance warning)
+coreanimation.cpp
+corebone.cpp
+corekeyframe.cpp
+corematerial.cpp
+coremesh.cpp
+coremodel.cpp
+coremorphanimation.cpp
+coreskeleton.cpp
+coresubmesh.cpp
+coresubmorphtarget.cpp
+coretrack.cpp
+error.cpp
+global.cpp
+hardwaremodel.cpp
+Generating Code...
+Compiling...
+loader.cpp
+matrix.cpp
+mesh.cpp
+mixer.cpp
+model.cpp
+morphtargetmixer.cpp
+physique.cpp
+platform.cpp
+quaternion.cpp
+renderer.cpp
+saver.cpp
+skeleton.cpp
+springsystem.cpp
+streamsource.cpp
+submesh.cpp
+tinyxml.cpp
+tinyxmlerror.cpp
+tinyxmlparser.cpp
+vector.cpp
+Generating Code...
+Linking...
+   Creating library ..\..\bin\Debug/cal3d_d.lib and object ..\..\bin\Debug/cal3d_d.exp
+
+
+
+<h3>Results</h3>
+cal3d_d.dll - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Cal3D - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x807 /fo".\Release/cal3d.res" /d "NDEBUG" "C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\cal3d.rc"" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP5418.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I ".." /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_USRDLL" /D "CAL3D_EXPORTS" /D "_MBCS" /Fo".\Release/" /GF /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\animation.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\animation_action.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\animation_cycle.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\bone.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\buffersource.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\cal3d_wrapper.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coreanimation.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\corebone.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\corekeyframe.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\corematerial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coremesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coremodel.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coremorphanimation.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coreskeleton.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coresubmesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coresubmorphtarget.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coretrack.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\error.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\global.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\hardwaremodel.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\loader.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\matrix.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\mesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\mixer.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\model.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\morphtargetmixer.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\physique.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\platform.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\quaternion.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\renderer.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\saver.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\skeleton.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\springsystem.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\streamsource.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\submesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\tinyxml.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\tinyxmlerror.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\tinyxmlparser.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\vector.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP5418.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP5419.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /incremental:no /pdb:".\Release\cal3d.pdb" /machine:I386 /out:"..\..\bin\Release/cal3d.dll" /implib:"..\..\bin\Release/cal3d.lib" /pdbtype:sept 
+".\Release\animation.obj"
+".\Release\animation_action.obj"
+".\Release\animation_cycle.obj"
+".\Release\bone.obj"
+".\Release\buffersource.obj"
+".\Release\cal3d_wrapper.obj"
+".\Release\coreanimation.obj"
+".\Release\corebone.obj"
+".\Release\corekeyframe.obj"
+".\Release\corematerial.obj"
+".\Release\coremesh.obj"
+".\Release\coremodel.obj"
+".\Release\coremorphanimation.obj"
+".\Release\coreskeleton.obj"
+".\Release\coresubmesh.obj"
+".\Release\coresubmorphtarget.obj"
+".\Release\coretrack.obj"
+".\Release\error.obj"
+".\Release\global.obj"
+".\Release\hardwaremodel.obj"
+".\Release\loader.obj"
+".\Release\matrix.obj"
+".\Release\mesh.obj"
+".\Release\mixer.obj"
+".\Release\model.obj"
+".\Release\morphtargetmixer.obj"
+".\Release\physique.obj"
+".\Release\platform.obj"
+".\Release\quaternion.obj"
+".\Release\renderer.obj"
+".\Release\saver.obj"
+".\Release\skeleton.obj"
+".\Release\springsystem.obj"
+".\Release\streamsource.obj"
+".\Release\submesh.obj"
+".\Release\tinyxml.obj"
+".\Release\tinyxmlerror.obj"
+".\Release\tinyxmlparser.obj"
+".\Release\vector.obj"
+".\Release\cal3d.res"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP5419.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+animation.cpp
+animation_action.cpp
+animation_cycle.cpp
+bone.cpp
+buffersource.cpp
+cal3d_wrapper.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\cal3d_wrapper.cpp(1023) : warning C4800: 'enum Boolean' : forcing value to bool 'true' or 'false' (performance warning)
+coreanimation.cpp
+corebone.cpp
+corekeyframe.cpp
+corematerial.cpp
+coremesh.cpp
+coremodel.cpp
+coremorphanimation.cpp
+coreskeleton.cpp
+coresubmesh.cpp
+coresubmorphtarget.cpp
+coretrack.cpp
+error.cpp
+global.cpp
+hardwaremodel.cpp
+Generating Code...
+Compiling...
+loader.cpp
+matrix.cpp
+mesh.cpp
+mixer.cpp
+model.cpp
+morphtargetmixer.cpp
+physique.cpp
+platform.cpp
+quaternion.cpp
+renderer.cpp
+saver.cpp
+skeleton.cpp
+springsystem.cpp
+streamsource.cpp
+submesh.cpp
+tinyxml.cpp
+tinyxmlerror.cpp
+tinyxmlparser.cpp
+vector.cpp
+Generating Code...
+Linking...
+   Creating library ..\..\bin\Release/cal3d.lib and object ..\..\bin\Release/cal3d.exp
+<h3>
+--------------------Configuration: Cal3D_Cally - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP79F2.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /I "../../src" /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\cally\src\demo.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\cally\src\main.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\cally\src\menu.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\cally\src\model.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\cally\src\tga.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\cally\src\tick.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP79F2.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP79F3.tmp" with contents
+[
+glut32.lib glu32.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:no /pdb:"Release/cally.pdb" /machine:I386 /out:"../../bin/Release/cally.exe" /libpath:"..\cal3d\Release" 
+".\Release\demo.obj"
+".\Release\main.obj"
+".\Release\menu.obj"
+".\Release\model.obj"
+".\Release\tga.obj"
+".\Release\tick.obj"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Release\cal3d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP79F3.tmp"
+<h3>Output Window</h3>
+Compiling...
+demo.cpp
+main.cpp
+menu.cpp
+model.cpp
+tga.cpp
+tick.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+cally.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Cal3D - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x807 /fo".\Debug/cal3d.res" /d "_DEBUG" "C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\cal3d.rc"" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP8260.tmp" with contents
+[
+/nologo /MDd /W3 /GX /ZI /Od /I ".." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_USRDLL" /D "CAL3D_EXPORTS" /D "_MBCS" /Fo".\Debug/" /Fd".\Debug/" /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\animation.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\animation_action.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\animation_cycle.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\bone.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\buffersource.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\cal3d_wrapper.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coreanimation.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\corebone.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\corekeyframe.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\corematerial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coremesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coremodel.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coremorphanimation.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coreskeleton.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coresubmesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coresubmorphtarget.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\coretrack.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\error.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\global.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\hardwaremodel.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\loader.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\matrix.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\mesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\mixer.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\model.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\morphtargetmixer.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\physique.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\platform.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\quaternion.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\renderer.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\saver.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\skeleton.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\springsystem.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\streamsource.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\submesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\tinyxml.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\tinyxmlerror.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\tinyxmlparser.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\src\cal3d\vector.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP8260.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP8261.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:".\Debug\cal3d.pdb" /debug /machine:I386 /out:"..\..\bin\Debug\cal3d_d.dll" /implib:"..\..\bin\Debug/cal3d_d.lib" /pdbtype:sept 
+".\Debug\animation.obj"
+".\Debug\animation_action.obj"
+".\Debug\animation_cycle.obj"
+".\Debug\bone.obj"
+".\Debug\buffersource.obj"
+".\Debug\cal3d_wrapper.obj"
+".\Debug\coreanimation.obj"
+".\Debug\corebone.obj"
+".\Debug\corekeyframe.obj"
+".\Debug\corematerial.obj"
+".\Debug\coremesh.obj"
+".\Debug\coremodel.obj"
+".\Debug\coremorphanimation.obj"
+".\Debug\coreskeleton.obj"
+".\Debug\coresubmesh.obj"
+".\Debug\coresubmorphtarget.obj"
+".\Debug\coretrack.obj"
+".\Debug\error.obj"
+".\Debug\global.obj"
+".\Debug\hardwaremodel.obj"
+".\Debug\loader.obj"
+".\Debug\matrix.obj"
+".\Debug\mesh.obj"
+".\Debug\mixer.obj"
+".\Debug\model.obj"
+".\Debug\morphtargetmixer.obj"
+".\Debug\physique.obj"
+".\Debug\platform.obj"
+".\Debug\quaternion.obj"
+".\Debug\renderer.obj"
+".\Debug\saver.obj"
+".\Debug\skeleton.obj"
+".\Debug\springsystem.obj"
+".\Debug\streamsource.obj"
+".\Debug\submesh.obj"
+".\Debug\tinyxml.obj"
+".\Debug\tinyxmlerror.obj"
+".\Debug\tinyxmlparser.obj"
+".\Debug\vector.obj"
+".\Debug\cal3d.res"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP8261.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+animation.cpp
+animation_action.cpp
+animation_cycle.cpp
+bone.cpp
+buffersource.cpp
+cal3d_wrapper.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\src\cal3d\cal3d_wrapper.cpp(1023) : warning C4800: 'enum Boolean' : forcing value to bool 'true' or 'false' (performance warning)
+coreanimation.cpp
+corebone.cpp
+corekeyframe.cpp
+corematerial.cpp
+coremesh.cpp
+coremodel.cpp
+coremorphanimation.cpp
+coreskeleton.cpp
+coresubmesh.cpp
+coresubmorphtarget.cpp
+coretrack.cpp
+error.cpp
+global.cpp
+hardwaremodel.cpp
+Generating Code...
+Compiling...
+loader.cpp
+matrix.cpp
+mesh.cpp
+mixer.cpp
+model.cpp
+morphtargetmixer.cpp
+physique.cpp
+platform.cpp
+quaternion.cpp
+renderer.cpp
+saver.cpp
+skeleton.cpp
+springsystem.cpp
+streamsource.cpp
+submesh.cpp
+tinyxml.cpp
+tinyxmlerror.cpp
+tinyxmlparser.cpp
+vector.cpp
+Generating Code...
+Linking...
+<h3>
+--------------------Configuration: Cal3D_Cally - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPA03B.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "../../src" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\cally\src\demo.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\cally\src\main.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\cally\src\menu.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\cally\src\model.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\cally\src\tga.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\cally\src\tick.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPA03B.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPA03C.tmp" with contents
+[
+glut32.lib glu32.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/cally.pdb" /debug /machine:I386 /out:"../../bin/Debug/cally.exe" /pdbtype:sept /libpath:"..\cal3d\Debug" 
+".\Debug\demo.obj"
+".\Debug\main.obj"
+".\Debug\menu.obj"
+".\Debug\model.obj"
+".\Debug\tga.obj"
+".\Debug\tick.obj"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Debug\cal3d_d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPA03C.tmp"
+<h3>Output Window</h3>
+Compiling...
+demo.cpp
+main.cpp
+menu.cpp
+model.cpp
+tga.cpp
+tick.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+cally.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Cal3D_MiniViewer - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPA8F7.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /I "..\..\src" /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_gl\src\main.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_gl\src\tga.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_gl\src\tick.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_gl\src\viewer.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPA8F7.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPA8F8.tmp" with contents
+[
+glut32.lib glu32.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:no /pdb:"Release/cal3d_miniviewer.pdb" /machine:I386 /out:"../../bin/Release/cal3d_miniviewer.exe" /libpath:"..\cal3d\Release" 
+".\Release\main.obj"
+".\Release\tga.obj"
+".\Release\tick.obj"
+".\Release\viewer.obj"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Release\cal3d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPA8F8.tmp"
+<h3>Output Window</h3>
+Compiling...
+main.cpp
+tga.cpp
+tick.cpp
+viewer.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+cal3d_miniviewer.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: Cal3D_MiniViewer - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPAE77.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "..\..\src" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_gl\src\main.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_gl\src\tga.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_gl\src\tick.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_gl\src\viewer.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPAE77.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPAE78.tmp" with contents
+[
+glut32.lib glu32.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/cal3d_miniviewer.pdb" /debug /machine:I386 /out:"../../bin/Debug/cal3d_miniviewer.exe" /pdbtype:sept /libpath:"..\cal3d\Debug" 
+".\Debug\main.obj"
+".\Debug\tga.obj"
+".\Debug\tick.obj"
+".\Debug\viewer.obj"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Debug\cal3d_d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPAE78.tmp"
+<h3>Output Window</h3>
+Compiling...
+main.cpp
+c:\users\mozun\desktop\cal3d\vc6.0green\vc98\include\vector(60) : warning C4786: 'std::reverse_iterator<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > const *,std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> >,std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > const &,std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > const *,int>' : identifier was truncated to '255' characters in the debug information
+        c:\users\mozun\desktop\cal3d\vc6.0green\vc98\include\vector(58) : while compiling class-template member function '__thiscall std::vector<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> >,std::allocator<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > > >::~std::vector<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> >,std::allocator<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > > >(void)'
+c:\users\mozun\desktop\cal3d\vc6.0green\vc98\include\vector(60) : warning C4786: 'std::reverse_iterator<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > *,std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> >,std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > &,std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > *,int>' : identifier was truncated to '255' characters in the debug information
+        c:\users\mozun\desktop\cal3d\vc6.0green\vc98\include\vector(58) : while compiling class-template member function '__thiscall std::vector<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> >,std::allocator<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > > >::~std::vector<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> >,std::allocator<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > > >(void)'
+tga.cpp
+tick.cpp
+viewer.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+cal3d_miniviewer.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_converter - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPB7E0.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Release/cal3d_converter.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\SRC\cal3d_converter.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPB7E0.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPB7E1.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:no /pdb:"Release/cal3d_converter.pdb" /machine:I386 /out:"../bin/Release/cal3d_converter.exe" 
+".\Release\cal3d_converter.obj"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Release\cal3d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPB7E1.tmp"
+<h3>Output Window</h3>
+Compiling...
+cal3d_converter.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\SRC\cal3d_converter.cpp(93) : warning C4101: 'Loader' : unreferenced local variable
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\SRC\cal3d_converter.cpp(92) : warning C4101: 'Saver' : unreferenced local variable
+Linking...
+
+
+
+<h3>Results</h3>
+cal3d_converter.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_converter - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPB9F5.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/cal3d_converter.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\SRC\cal3d_converter.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPB9F5.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPB9F6.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/cal3d_converter.pdb" /debug /machine:I386 /out:"../bin/Debug/cal3d_converter.exe" /pdbtype:sept 
+".\Debug\cal3d_converter.obj"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Debug\cal3d_d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPB9F6.tmp"
+<h3>Output Window</h3>
+Compiling...
+cal3d_converter.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\src\cal3d_converter.cpp(93) : warning C4101: 'Loader' : unreferenced local variable
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\src\cal3d_converter.cpp(92) : warning C4101: 'Saver' : unreferenced local variable
+Linking...
+
+
+
+<h3>Results</h3>
+cal3d_converter.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_importer - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPBBAC.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "..\..\src" /D "NDEBUG" /D "_WINDLL" /D "_AFXDLL" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "CAL3D_IMPORTER_EXPORTS" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\cal3d_max_importer.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\MaxAnimationImport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\MaxAnimationImportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\MaxSkeletonImport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\MaxSkeletonImportDesc.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPBBAC.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPBBBD.tmp" with contents
+[
+core.lib geom.lib gfx.lib mesh.lib maxutil.lib maxscrpt.lib paramblk2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:no /pdb:"Release/cal3d_max_importer.pdb" /machine:I386 /def:".\cal3d_max_importer.def" /out:"..\..\bin\Release/cal3d_max_importer.dli" /implib:"Release/cal3d_max_importer.lib" /libpath:"..\cal3d\Release" 
+".\Release\cal3d_max_importer.obj"
+".\Release\MaxAnimationImport.obj"
+".\Release\MaxAnimationImportDesc.obj"
+".\Release\MaxSkeletonImport.obj"
+".\Release\MaxSkeletonImportDesc.obj"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Release\cal3d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPBBBD.tmp"
+<h3>Output Window</h3>
+Compiling...
+cal3d_max_importer.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\cal3d_max_importer.h(6) : fatal error C1083: Cannot open include file: 'max.h': No such file or directory
+MaxAnimationImport.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\MaxAnimationImport.h(5) : fatal error C1083: Cannot open include file: 'max.h': No such file or directory
+MaxAnimationImportDesc.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\MaxAnimationImportDesc.h(5) : fatal error C1083: Cannot open include file: 'max.h': No such file or directory
+MaxSkeletonImport.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\bones.h(8) : fatal error C1083: Cannot open include file: 'max.h': No such file or directory
+MaxSkeletonImportDesc.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\MaxSkeletonImportDesc.h(5) : fatal error C1083: Cannot open include file: 'max.h': No such file or directory
+Generating Code...
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+cal3d_max_importer.dli - 1 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_importer - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPC0CF.tmp" with contents
+[
+/nologo /MDd /W3 /GX /ZI /Od /I "..\..\src" /D "_DEBUG" /D "_WINDLL" /D "_AFXDLL" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "CAL3D_IMPORTER_EXPORTS" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\cal3d_max_importer.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\MaxAnimationImport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\MaxAnimationImportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\MaxSkeletonImport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\MaxSkeletonImportDesc.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPC0CF.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPC0D0.tmp" with contents
+[
+core.lib geom.lib gfx.lib mesh.lib maxutil.lib maxscrpt.lib paramblk2.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /dll /incremental:yes /pdb:"Debug/cal3d_max_importer.pdb" /debug /machine:I386 /def:".\cal3d_max_importer.def" /out:"..\..\bin\Debug/cal3d_max_importer.dli" /implib:"Debug/cal3d_max_importer.lib" /pdbtype:sept /libpath:"..\cal3d\Debug" 
+".\Debug\cal3d_max_importer.obj"
+".\Debug\MaxAnimationImport.obj"
+".\Debug\MaxAnimationImportDesc.obj"
+".\Debug\MaxSkeletonImport.obj"
+".\Debug\MaxSkeletonImportDesc.obj"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Debug\cal3d_d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPC0D0.tmp"
+<h3>Output Window</h3>
+Compiling...
+cal3d_max_importer.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\cal3d_max_importer.h(6) : fatal error C1083: Cannot open include file: 'max.h': No such file or directory
+MaxAnimationImport.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\maxanimationimport.h(5) : fatal error C1083: Cannot open include file: 'max.h': No such file or directory
+MaxAnimationImportDesc.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\maxanimationimportdesc.h(5) : fatal error C1083: Cannot open include file: 'max.h': No such file or directory
+MaxSkeletonImport.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\bones.h(8) : fatal error C1083: Cannot open include file: 'max.h': No such file or directory
+MaxSkeletonImportDesc.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_importer\maxskeletonimportdesc.h(5) : fatal error C1083: Cannot open include file: 'max.h': No such file or directory
+Generating Code...
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+cal3d_max_importer.dli - 1 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_max_exporter - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x807 /fo"Release/cal3d_max_exporter.res" /d "NDEBUG" /d "_AFXDLL" "C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\cal3d_max_exporter.rc"" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPC3BF.tmp" with contents
+[
+/nologo /MD /W3 /GR /GX /O2 /I "." /I "..\src" /I "..\src\win32" /I "..\..\src" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Release/cal3d_max_exporter.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\AnimationExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\AnimationTimePage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseInterface.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseMaterial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseMesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseNode.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\BoneAssignmentPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BoneCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\cal3d_max_exporter.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\LevelOfDetailPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Lodder.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MaterialCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MaterialLibraryCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialMapDialog.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialMapsPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialSelectionPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\max2ogl.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxAnimationExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxAnimationExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxAnimationExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxInterface.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterialExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterialExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterialExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMeshExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMeshExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMeshExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxNode.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxNullView.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxSkeletonExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxSkeletonExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxSkeletonExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MeshCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MeshExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Quadric.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\SkeletonCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonFilePage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonHierarchyPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\SubmeshCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\VertexCandidate.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPC3BF.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPC3C0.tmp" with contents
+[
+/nologo /MD /W3 /GR /GX /O2 /I "." /I "..\src" /I "..\src\win32" /I "..\..\src" /I "..\..\cal3d_max_exporter" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Release/cal3d_max_exporter.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SpringSystemPage.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPC3C0.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPC3C1.tmp" with contents
+[
+/nologo /MD /W3 /GR /GX /O2 /I "." /I "..\src" /I "..\src\win32" /I "..\..\src" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Release/cal3d_max_exporter.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPC3C1.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPC3C2.tmp" with contents
+[
+core.lib geom.lib gfx.lib mesh.lib maxutil.lib maxscrpt.lib paramblk2.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"Release/cal3d_max_exporter.pdb" /machine:I386 /def:".\cal3d_max_exporter.def" /out:"..\..\bin\Release\cal3d_max_exporter.dle" /implib:"Release/cal3d_max_exporter.lib" /libpath:"..\..\cal3d\Release" /libpath:"C:\Programme\3dsmax4\Maxsdk\lib" 
+".\Release\AnimationExportSheet.obj"
+".\Release\AnimationTimePage.obj"
+".\Release\BaseInterface.obj"
+".\Release\BaseMaterial.obj"
+".\Release\BaseMesh.obj"
+".\Release\BaseNode.obj"
+".\Release\BoneAssignmentPage.obj"
+".\Release\BoneCandidate.obj"
+".\Release\cal3d_max_exporter.obj"
+".\Release\Exporter.obj"
+".\Release\LevelOfDetailPage.obj"
+".\Release\Lodder.obj"
+".\Release\MaterialCandidate.obj"
+".\Release\MaterialExportSheet.obj"
+".\Release\MaterialLibraryCandidate.obj"
+".\Release\MaterialMapDialog.obj"
+".\Release\MaterialMapsPage.obj"
+".\Release\MaterialSelectionPage.obj"
+".\Release\max2ogl.obj"
+".\Release\MaxAnimationExport.obj"
+".\Release\MaxAnimationExportDesc.obj"
+".\Release\MaxAnimationExportMaxscriptCall.obj"
+".\Release\MaxInterface.obj"
+".\Release\MaxMaterial.obj"
+".\Release\MaxMaterialExport.obj"
+".\Release\MaxMaterialExportDesc.obj"
+".\Release\MaxMaterialExportMaxscriptCall.obj"
+".\Release\MaxMesh.obj"
+".\Release\MaxMeshExport.obj"
+".\Release\MaxMeshExportDesc.obj"
+".\Release\MaxMeshExportMaxscriptCall.obj"
+".\Release\MaxNode.obj"
+".\Release\MaxNullView.obj"
+".\Release\MaxSkeletonExport.obj"
+".\Release\MaxSkeletonExportDesc.obj"
+".\Release\MaxSkeletonExportMaxscriptCall.obj"
+".\Release\MeshCandidate.obj"
+".\Release\MeshExportSheet.obj"
+".\Release\Quadric.obj"
+".\Release\SkeletonCandidate.obj"
+".\Release\SkeletonExportSheet.obj"
+".\Release\SkeletonFilePage.obj"
+".\Release\SkeletonHierarchyPage.obj"
+".\Release\SpringSystemPage.obj"
+".\Release\StdAfx.obj"
+".\Release\SubmeshCandidate.obj"
+".\Release\VertexCandidate.obj"
+".\Release\cal3d_max_exporter.res"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Release\cal3d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPC3C2.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\StdAfx.h(43) : fatal error C1083: Cannot open include file: 'max.h': No such file or directory
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+cal3d_max_exporter.dle - 1 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_max_exporter - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x807 /fo"Debug/cal3d_max_exporter.res" /d "_DEBUG" /d "_AFXDLL" "C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\cal3d_max_exporter.rc"" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPC6A1.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GR /GX /ZI /Od /I "." /I "..\src" /I "..\src\win32" /I "..\..\src" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\AnimationExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\AnimationTimePage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseInterface.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseMaterial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseMesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseNode.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\BoneAssignmentPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BoneCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\cal3d_max_exporter.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\LevelOfDetailPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Lodder.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MaterialCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MaterialLibraryCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialMapDialog.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialMapsPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialSelectionPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\max2ogl.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxAnimationExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxAnimationExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxAnimationExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxInterface.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterialExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterialExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterialExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMeshExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMeshExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMeshExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxNode.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxNullView.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxSkeletonExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxSkeletonExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxSkeletonExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MeshCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MeshExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Quadric.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\SkeletonCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonFilePage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonHierarchyPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\SubmeshCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\VertexCandidate.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPC6A1.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPC6A2.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GR /GX /ZI /Od /I "." /I "..\src" /I "..\src\win32" /I "..\..\src" /I "..\..\cal3d_max_exporter" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SpringSystemPage.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPC6A2.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPC6A3.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GR /GX /ZI /Od /I "." /I "..\src" /I "..\src\win32" /I "..\..\src" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Debug/cal3d_max_exporter.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPC6A3.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPC6A4.tmp" with contents
+[
+core.lib geom.lib gfx.lib mesh.lib maxutil.lib maxscrpt.lib paramblk2.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/cal3d_max_exporter.pdb" /debug /machine:I386 /def:".\cal3d_max_exporter.def" /out:"..\..\bin\Debug\cal3d_max_exporter.dle" /implib:"Debug/cal3d_max_exporter.lib" /pdbtype:sept /libpath:"..\..\cal3d\Debug" /libpath:"C:\Programme\3dsmax4\Maxsdk\lib" 
+".\Debug\AnimationExportSheet.obj"
+".\Debug\AnimationTimePage.obj"
+".\Debug\BaseInterface.obj"
+".\Debug\BaseMaterial.obj"
+".\Debug\BaseMesh.obj"
+".\Debug\BaseNode.obj"
+".\Debug\BoneAssignmentPage.obj"
+".\Debug\BoneCandidate.obj"
+".\Debug\cal3d_max_exporter.obj"
+".\Debug\Exporter.obj"
+".\Debug\LevelOfDetailPage.obj"
+".\Debug\Lodder.obj"
+".\Debug\MaterialCandidate.obj"
+".\Debug\MaterialExportSheet.obj"
+".\Debug\MaterialLibraryCandidate.obj"
+".\Debug\MaterialMapDialog.obj"
+".\Debug\MaterialMapsPage.obj"
+".\Debug\MaterialSelectionPage.obj"
+".\Debug\max2ogl.obj"
+".\Debug\MaxAnimationExport.obj"
+".\Debug\MaxAnimationExportDesc.obj"
+".\Debug\MaxAnimationExportMaxscriptCall.obj"
+".\Debug\MaxInterface.obj"
+".\Debug\MaxMaterial.obj"
+".\Debug\MaxMaterialExport.obj"
+".\Debug\MaxMaterialExportDesc.obj"
+".\Debug\MaxMaterialExportMaxscriptCall.obj"
+".\Debug\MaxMesh.obj"
+".\Debug\MaxMeshExport.obj"
+".\Debug\MaxMeshExportDesc.obj"
+".\Debug\MaxMeshExportMaxscriptCall.obj"
+".\Debug\MaxNode.obj"
+".\Debug\MaxNullView.obj"
+".\Debug\MaxSkeletonExport.obj"
+".\Debug\MaxSkeletonExportDesc.obj"
+".\Debug\MaxSkeletonExportMaxscriptCall.obj"
+".\Debug\MeshCandidate.obj"
+".\Debug\MeshExportSheet.obj"
+".\Debug\Quadric.obj"
+".\Debug\SkeletonCandidate.obj"
+".\Debug\SkeletonExportSheet.obj"
+".\Debug\SkeletonFilePage.obj"
+".\Debug\SkeletonHierarchyPage.obj"
+".\Debug\SpringSystemPage.obj"
+".\Debug\StdAfx.obj"
+".\Debug\SubmeshCandidate.obj"
+".\Debug\VertexCandidate.obj"
+".\Debug\cal3d_max_exporter.res"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Debug\cal3d_d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPC6A4.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\stdafx.h(43) : fatal error C1083: Cannot open include file: 'max.h': No such file or directory
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+cal3d_max_exporter.dle - 1 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_max_exporter - Win32 Release Max 6--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x807 /fo"cal3d_max_exporter___Win32_Release_Max_6/cal3d_max_exporter.res" /d "NDEBUG" /d "_AFXDLL" "C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\cal3d_max_exporter.rc"" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPC84B.tmp" with contents
+[
+/nologo /MD /W3 /GR /GX /O2 /I "." /I "..\src" /I "..\src\win32" /I "..\..\src" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"cal3d_max_exporter___Win32_Release_Max_6/cal3d_max_exporter.pch" /Yu"stdafx.h" /Fo"cal3d_max_exporter___Win32_Release_Max_6/" /Fd"cal3d_max_exporter___Win32_Release_Max_6/" /FD /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\AnimationExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\AnimationTimePage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseInterface.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseMaterial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseMesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseNode.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\BoneAssignmentPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BoneCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\cal3d_max_exporter.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\LevelOfDetailPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Lodder.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MaterialCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MaterialLibraryCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialMapDialog.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialMapsPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialSelectionPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\max2ogl.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxAnimationExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxAnimationExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxAnimationExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxInterface.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterialExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterialExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterialExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMeshExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMeshExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMeshExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxNode.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxNullView.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxSkeletonExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxSkeletonExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxSkeletonExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MeshCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MeshExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Quadric.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\SkeletonCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonFilePage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonHierarchyPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\SubmeshCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\VertexCandidate.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPC84B.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPC84C.tmp" with contents
+[
+/nologo /MD /W3 /GR /GX /O2 /I "." /I "..\src" /I "..\src\win32" /I "..\..\src" /I "..\..\cal3d_max_exporter" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"cal3d_max_exporter___Win32_Release_Max_6/cal3d_max_exporter.pch" /Yu"stdafx.h" /Fo"cal3d_max_exporter___Win32_Release_Max_6/" /Fd"cal3d_max_exporter___Win32_Release_Max_6/" /FD /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SpringSystemPage.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPC84C.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPC84D.tmp" with contents
+[
+/nologo /MD /W3 /GR /GX /O2 /I "." /I "..\src" /I "..\src\win32" /I "..\..\src" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"cal3d_max_exporter___Win32_Release_Max_6/cal3d_max_exporter.pch" /Yc"stdafx.h" /Fo"cal3d_max_exporter___Win32_Release_Max_6/" /Fd"cal3d_max_exporter___Win32_Release_Max_6/" /FD /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPC84D.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPC84E.tmp" with contents
+[
+core.lib geom.lib gfx.lib mesh.lib maxutil.lib maxscrpt.lib paramblk2.lib cal3D.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"cal3d_max_exporter___Win32_Release_Max_6/cal3d_max_exporter_DL3D.pdb" /machine:I386 /def:".\cal3d_max_exporter.def" /out:"..\..\bin\Release\cal3d_max_exporter_DL3D.dle" /implib:"cal3d_max_exporter___Win32_Release_Max_6/cal3d_max_exporter_DL3D.lib" /libpath:"..\..\cal3d\Release" /libpath:"C:\3dsmax6\Maxsdk\lib" /libpath:"..\..\bin\release" 
+".\cal3d_max_exporter___Win32_Release_Max_6\AnimationExportSheet.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\AnimationTimePage.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\BaseInterface.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\BaseMaterial.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\BaseMesh.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\BaseNode.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\BoneAssignmentPage.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\BoneCandidate.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\cal3d_max_exporter.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\Exporter.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\LevelOfDetailPage.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\Lodder.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaterialCandidate.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaterialExportSheet.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaterialLibraryCandidate.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaterialMapDialog.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaterialMapsPage.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaterialSelectionPage.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\max2ogl.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaxAnimationExport.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaxAnimationExportDesc.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaxAnimationExportMaxscriptCall.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaxInterface.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaxMaterial.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaxMaterialExport.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaxMaterialExportDesc.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaxMaterialExportMaxscriptCall.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaxMesh.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaxMeshExport.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaxMeshExportDesc.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaxMeshExportMaxscriptCall.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaxNode.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaxNullView.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaxSkeletonExport.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaxSkeletonExportDesc.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MaxSkeletonExportMaxscriptCall.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MeshCandidate.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\MeshExportSheet.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\Quadric.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\SkeletonCandidate.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\SkeletonExportSheet.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\SkeletonFilePage.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\SkeletonHierarchyPage.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\SpringSystemPage.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\StdAfx.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\SubmeshCandidate.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\VertexCandidate.obj"
+".\cal3d_max_exporter___Win32_Release_Max_6\cal3d_max_exporter.res"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPC84E.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\StdAfx.h(43) : fatal error C1083: Cannot open include file: 'max.h': No such file or directory
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+cal3d_max_exporter_DL3D.dle - 1 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_max_exporter - Win32 Debug Max 6--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x807 /fo"cal3d_max_exporter___Win32_Debug_Max_6/cal3d_max_exporter.res" /d "_DEBUG" /d "_AFXDLL" "C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\cal3d_max_exporter.rc"" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPCA82.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GR /GX /ZI /Od /I "." /I "..\src" /I "..\src\win32" /I "..\..\src" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"cal3d_max_exporter___Win32_Debug_Max_6/cal3d_max_exporter.pch" /Yu"stdafx.h" /Fo"cal3d_max_exporter___Win32_Debug_Max_6/" /Fd"cal3d_max_exporter___Win32_Debug_Max_6/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\AnimationExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\AnimationTimePage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseInterface.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseMaterial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseMesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseNode.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\BoneAssignmentPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BoneCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\cal3d_max_exporter.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\LevelOfDetailPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Lodder.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MaterialCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MaterialLibraryCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialMapDialog.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialMapsPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialSelectionPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\max2ogl.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxAnimationExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxAnimationExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxAnimationExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxInterface.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterialExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterialExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterialExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMeshExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMeshExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMeshExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxNode.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxNullView.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxSkeletonExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxSkeletonExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxSkeletonExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MeshCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MeshExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Quadric.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\SkeletonCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonFilePage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonHierarchyPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\SubmeshCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\VertexCandidate.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPCA82.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPCA83.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GR /GX /ZI /Od /I "." /I "..\src" /I "..\src\win32" /I "..\..\src" /I "..\..\cal3d_max_exporter" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"cal3d_max_exporter___Win32_Debug_Max_6/cal3d_max_exporter.pch" /Yu"stdafx.h" /Fo"cal3d_max_exporter___Win32_Debug_Max_6/" /Fd"cal3d_max_exporter___Win32_Debug_Max_6/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SpringSystemPage.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPCA83.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPCA84.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GR /GX /ZI /Od /I "." /I "..\src" /I "..\src\win32" /I "..\..\src" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"cal3d_max_exporter___Win32_Debug_Max_6/cal3d_max_exporter.pch" /Yc"stdafx.h" /Fo"cal3d_max_exporter___Win32_Debug_Max_6/" /Fd"cal3d_max_exporter___Win32_Debug_Max_6/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPCA84.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPCA85.tmp" with contents
+[
+core.lib geom.lib gfx.lib mesh.lib maxutil.lib maxscrpt.lib paramblk2.lib cal3D_d.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"cal3d_max_exporter___Win32_Debug_Max_6/cal3d_max_exporter_DL3D.pdb" /debug /machine:I386 /def:".\cal3d_max_exporter.def" /out:"..\..\bin\Debug\cal3d_max_exporter_DL3D.dle" /implib:"cal3d_max_exporter___Win32_Debug_Max_6/cal3d_max_exporter_DL3D.lib" /pdbtype:sept /libpath:"..\..\cal3d\Debug" /libpath:"C:\3dsmax6\Maxsdk\lib" /libpath:"..\..\bin\debug" 
+".\cal3d_max_exporter___Win32_Debug_Max_6\AnimationExportSheet.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\AnimationTimePage.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\BaseInterface.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\BaseMaterial.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\BaseMesh.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\BaseNode.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\BoneAssignmentPage.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\BoneCandidate.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\cal3d_max_exporter.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\Exporter.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\LevelOfDetailPage.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\Lodder.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaterialCandidate.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaterialExportSheet.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaterialLibraryCandidate.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaterialMapDialog.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaterialMapsPage.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaterialSelectionPage.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\max2ogl.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaxAnimationExport.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaxAnimationExportDesc.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaxAnimationExportMaxscriptCall.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaxInterface.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaxMaterial.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaxMaterialExport.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaxMaterialExportDesc.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaxMaterialExportMaxscriptCall.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaxMesh.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaxMeshExport.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaxMeshExportDesc.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaxMeshExportMaxscriptCall.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaxNode.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaxNullView.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaxSkeletonExport.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaxSkeletonExportDesc.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MaxSkeletonExportMaxscriptCall.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MeshCandidate.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\MeshExportSheet.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\Quadric.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\SkeletonCandidate.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\SkeletonExportSheet.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\SkeletonFilePage.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\SkeletonHierarchyPage.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\SpringSystemPage.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\StdAfx.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\SubmeshCandidate.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\VertexCandidate.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_6\cal3d_max_exporter.res"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPCA85.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\stdafx.h(43) : fatal error C1083: Cannot open include file: 'max.h': No such file or directory
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+cal3d_max_exporter_DL3D.dle - 1 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_max_exporter - Win32 Debug Max 5--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x807 /fo"cal3d_max_exporter___Win32_Debug_Max_5/cal3d_max_exporter.res" /d "_DEBUG" /d "_AFXDLL" "C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\cal3d_max_exporter.rc"" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPCCF7.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GR /GX /ZI /Od /I "." /I "..\src" /I "..\src\win32" /I "..\..\src" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"cal3d_max_exporter___Win32_Debug_Max_5/cal3d_max_exporter.pch" /Yu"stdafx.h" /Fo"cal3d_max_exporter___Win32_Debug_Max_5/" /Fd"cal3d_max_exporter___Win32_Debug_Max_5/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\AnimationExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\AnimationTimePage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseInterface.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseMaterial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseMesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseNode.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\BoneAssignmentPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BoneCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\cal3d_max_exporter.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\LevelOfDetailPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Lodder.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MaterialCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MaterialLibraryCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialMapDialog.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialMapsPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialSelectionPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\max2ogl.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxAnimationExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxAnimationExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxAnimationExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxInterface.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterialExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterialExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMaterialExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMeshExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMeshExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxMeshExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxNode.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxNullView.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxSkeletonExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxSkeletonExportDesc.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\MaxSkeletonExportMaxscriptCall.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MeshCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MeshExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Quadric.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\SkeletonCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonFilePage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonHierarchyPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\SubmeshCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\VertexCandidate.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPCCF7.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPCCF8.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GR /GX /ZI /Od /I "." /I "..\src" /I "..\src\win32" /I "..\..\src" /I "..\..\cal3d_max_exporter" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"cal3d_max_exporter___Win32_Debug_Max_5/cal3d_max_exporter.pch" /Yu"stdafx.h" /Fo"cal3d_max_exporter___Win32_Debug_Max_5/" /Fd"cal3d_max_exporter___Win32_Debug_Max_5/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SpringSystemPage.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPCCF8.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPCCF9.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GR /GX /ZI /Od /I "." /I "..\src" /I "..\src\win32" /I "..\..\src" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"cal3d_max_exporter___Win32_Debug_Max_5/cal3d_max_exporter.pch" /Yc"stdafx.h" /Fo"cal3d_max_exporter___Win32_Debug_Max_5/" /Fd"cal3d_max_exporter___Win32_Debug_Max_5/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPCCF9.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPCCFA.tmp" with contents
+[
+core.lib geom.lib gfx.lib mesh.lib maxutil.lib maxscrpt.lib paramblk2.lib cal3D_d.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"cal3d_max_exporter___Win32_Debug_Max_5/cal3d_max_exporter_DL3D.pdb" /debug /machine:I386 /def:".\cal3d_max_exporter.def" /out:"..\..\bin\Debug\cal3d_max_exporter_DL3D.dle" /implib:"cal3d_max_exporter___Win32_Debug_Max_5/cal3d_max_exporter_DL3D.lib" /pdbtype:sept /libpath:"..\..\cal3d\Debug" /libpath:"C:\3dsmax5\Maxsdk\lib" /libpath:"..\..\bin\debug" 
+".\cal3d_max_exporter___Win32_Debug_Max_5\AnimationExportSheet.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\AnimationTimePage.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\BaseInterface.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\BaseMaterial.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\BaseMesh.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\BaseNode.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\BoneAssignmentPage.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\BoneCandidate.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\cal3d_max_exporter.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\Exporter.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\LevelOfDetailPage.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\Lodder.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaterialCandidate.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaterialExportSheet.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaterialLibraryCandidate.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaterialMapDialog.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaterialMapsPage.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaterialSelectionPage.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\max2ogl.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaxAnimationExport.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaxAnimationExportDesc.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaxAnimationExportMaxscriptCall.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaxInterface.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaxMaterial.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaxMaterialExport.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaxMaterialExportDesc.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaxMaterialExportMaxscriptCall.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaxMesh.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaxMeshExport.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaxMeshExportDesc.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaxMeshExportMaxscriptCall.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaxNode.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaxNullView.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaxSkeletonExport.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaxSkeletonExportDesc.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MaxSkeletonExportMaxscriptCall.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MeshCandidate.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\MeshExportSheet.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\Quadric.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\SkeletonCandidate.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\SkeletonExportSheet.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\SkeletonFilePage.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\SkeletonHierarchyPage.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\SpringSystemPage.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\StdAfx.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\SubmeshCandidate.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\VertexCandidate.obj"
+".\cal3d_max_exporter___Win32_Debug_Max_5\cal3d_max_exporter.res"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPCCFA.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\cal3d_max_exporter\stdafx.h(43) : fatal error C1083: Cannot open include file: 'max.h': No such file or directory
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+cal3d_max_exporter_DL3D.dle - 1 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_maya_exporter - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0xc09 /fo"Release/cal3d_maya_exporter.res" /d "NDEBUG" /d "_AFXDLL" "C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\cal3d_maya_exporter.rc"" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPCEB0.tmp" with contents
+[
+/nologo /MD /W3 /GR /GX /O2 /I "." /I "../src" /I "../src/win32" /I "../../src" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /D "_BOOL" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\AnimationExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\AnimationTimePage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\BoneAssignmentPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\LevelOfDetailPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialMapDialog.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialMapsPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialSelectionPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MeshExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonFilePage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonHierarchyPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SpringSystemPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseInterface.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseMaterial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseMesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseNode.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BoneCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Lodder.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MaterialCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MaterialLibraryCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MeshCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Quadric.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\SkeletonCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\StdAfx.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\SubmeshCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\VertexCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\cal3d_maya_exporter.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\MayaInterface.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\MayaMaterial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\MayaMesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\MayaNode.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPCEB0.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPCEB1.tmp" with contents
+[
+Foundation.lib OpenMaya.lib OpenMayaAnim.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"Release/cal3dExport.pdb" /machine:I386 /out:"Release\cal3dExport.mll" /implib:"Release/cal3dExport.lib" /libpath:"..\..\Release" /export:initializePlugin /export:uninitializePlugin 
+".\Release\AnimationExportSheet.obj"
+".\Release\AnimationTimePage.obj"
+".\Release\BoneAssignmentPage.obj"
+".\Release\LevelOfDetailPage.obj"
+".\Release\MaterialExportSheet.obj"
+".\Release\MaterialMapDialog.obj"
+".\Release\MaterialMapsPage.obj"
+".\Release\MaterialSelectionPage.obj"
+".\Release\MeshExportSheet.obj"
+".\Release\SkeletonExportSheet.obj"
+".\Release\SkeletonFilePage.obj"
+".\Release\SkeletonHierarchyPage.obj"
+".\Release\SpringSystemPage.obj"
+".\Release\BaseInterface.obj"
+".\Release\BaseMaterial.obj"
+".\Release\BaseMesh.obj"
+".\Release\BaseNode.obj"
+".\Release\BoneCandidate.obj"
+".\Release\Exporter.obj"
+".\Release\Lodder.obj"
+".\Release\MaterialCandidate.obj"
+".\Release\MaterialLibraryCandidate.obj"
+".\Release\MeshCandidate.obj"
+".\Release\Quadric.obj"
+".\Release\SkeletonCandidate.obj"
+".\Release\StdAfx.obj"
+".\Release\SubmeshCandidate.obj"
+".\Release\VertexCandidate.obj"
+".\Release\cal3d_maya_exporter.obj"
+".\Release\MayaInterface.obj"
+".\Release\MayaMaterial.obj"
+".\Release\MayaMesh.obj"
+".\Release\MayaNode.obj"
+".\Release\cal3d_maya_exporter.res"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Release\cal3d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPCEB1.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+AnimationExportSheet.cpp
+AnimationTimePage.cpp
+BoneAssignmentPage.cpp
+LevelOfDetailPage.cpp
+MaterialExportSheet.cpp
+MaterialMapDialog.cpp
+MaterialMapsPage.cpp
+MaterialSelectionPage.cpp
+MeshExportSheet.cpp
+SkeletonExportSheet.cpp
+SkeletonFilePage.cpp
+SkeletonHierarchyPage.cpp
+SpringSystemPage.cpp
+BaseInterface.cpp
+BaseMaterial.cpp
+BaseMesh.cpp
+BaseNode.cpp
+BoneCandidate.cpp
+Exporter.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp(624) : error C2065: 'CalTransform' : undeclared identifier
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp(624) : error C2955: 'vector' : use of class template requires template argument list
+        C:\Users\MOZUN\Desktop\cal3d\VC6.0green\VC98\INCLUDE\vector(244) : see declaration of 'vector'
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp(624) : error C2133: 'poses' : unknown size
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp(624) : error C2512: 'vector' : no appropriate default constructor available
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp(624) : error C2262: 'poses' : cannot be destroyed
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp(625) : error C2660: 'resize' : function does not take 1 parameters
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp(672) : error C2065: 'pose_coord_sys' : undeclared identifier
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp(672) : error C2678: binary '[' : no operator defined which takes a left-hand operand of type 'class std::vector' (or there is no acceptable conversion)
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp(673) : error C2228: left of '.getTranslation' must have class/struct/union type
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp(673) : error C2228: left of '.getRotation' must have class/struct/union type
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp(704) : error C2039: 'setPoses' : is not a member of 'CalCoreAnimation'
+        ../../src\cal3d/coreanimation.h(22) : see declaration of 'CalCoreAnimation'
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp(705) : error C2039: 'setTrackAssignments' : is not a member of 'CalCoreAnimation'
+        ../../src\cal3d/coreanimation.h(22) : see declaration of 'CalCoreAnimation'
+Lodder.cpp
+Generating Code...
+Compiling...
+MaterialCandidate.cpp
+MaterialLibraryCandidate.cpp
+MeshCandidate.cpp
+Quadric.cpp
+SkeletonCandidate.cpp
+StdAfx.cpp
+SubmeshCandidate.cpp
+VertexCandidate.cpp
+cal3d_maya_exporter.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\MayaInterface.h(15) : fatal error C1083: Cannot open include file: 'maya/MGlobal.h': No such file or directory
+MayaInterface.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\MayaInterface.h(15) : fatal error C1083: Cannot open include file: 'maya/MGlobal.h': No such file or directory
+MayaMaterial.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\MayaMaterial.h(18) : fatal error C1083: Cannot open include file: 'maya/MObject.h': No such file or directory
+MayaMesh.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\MayaMesh.h(18) : fatal error C1083: Cannot open include file: 'maya/MDagPath.h': No such file or directory
+MayaNode.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\MayaNode.h(18) : fatal error C1083: Cannot open include file: 'maya/MGlobal.h': No such file or directory
+Generating Code...
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+cal3dExport.mll - 1 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_maya_exporter - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0xc09 /fo"Debug/cal3d_maya_exporter.res" /d "_DEBUG" /d "_AFXDLL" "C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\cal3d_maya_exporter.rc"" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPF778.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GR /GX /ZI /Od /I "." /I "../src" /I "../src/win32" /I "../../src" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /D "_BOOL" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\AnimationExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\AnimationTimePage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\BoneAssignmentPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\LevelOfDetailPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialMapDialog.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialMapsPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialSelectionPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MeshExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonFilePage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonHierarchyPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SpringSystemPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseInterface.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseMaterial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseMesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseNode.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BoneCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Lodder.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MaterialCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MaterialLibraryCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MeshCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Quadric.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\SkeletonCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\StdAfx.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\SubmeshCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\VertexCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\cal3d_maya_exporter.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\MayaInterface.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\MayaMaterial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\MayaMesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\MayaNode.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPF778.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSPF779.tmp" with contents
+[
+Foundation.lib OpenMaya.lib OpenMayaAnim.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/cal3dExport.pdb" /debug /machine:I386 /out:"Debug\cal3dExport.mll" /implib:"Debug/cal3dExport.lib" /pdbtype:sept /libpath:"..\..\Debug" /export:initializePlugin /export:uninitializePlugin 
+".\Debug\AnimationExportSheet.obj"
+".\Debug\AnimationTimePage.obj"
+".\Debug\BoneAssignmentPage.obj"
+".\Debug\LevelOfDetailPage.obj"
+".\Debug\MaterialExportSheet.obj"
+".\Debug\MaterialMapDialog.obj"
+".\Debug\MaterialMapsPage.obj"
+".\Debug\MaterialSelectionPage.obj"
+".\Debug\MeshExportSheet.obj"
+".\Debug\SkeletonExportSheet.obj"
+".\Debug\SkeletonFilePage.obj"
+".\Debug\SkeletonHierarchyPage.obj"
+".\Debug\SpringSystemPage.obj"
+".\Debug\BaseInterface.obj"
+".\Debug\BaseMaterial.obj"
+".\Debug\BaseMesh.obj"
+".\Debug\BaseNode.obj"
+".\Debug\BoneCandidate.obj"
+".\Debug\Exporter.obj"
+".\Debug\Lodder.obj"
+".\Debug\MaterialCandidate.obj"
+".\Debug\MaterialLibraryCandidate.obj"
+".\Debug\MeshCandidate.obj"
+".\Debug\Quadric.obj"
+".\Debug\SkeletonCandidate.obj"
+".\Debug\StdAfx.obj"
+".\Debug\SubmeshCandidate.obj"
+".\Debug\VertexCandidate.obj"
+".\Debug\cal3d_maya_exporter.obj"
+".\Debug\MayaInterface.obj"
+".\Debug\MayaMaterial.obj"
+".\Debug\MayaMesh.obj"
+".\Debug\MayaNode.obj"
+".\Debug\cal3d_maya_exporter.res"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Debug\cal3d_d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSPF779.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+AnimationExportSheet.cpp
+AnimationTimePage.cpp
+BoneAssignmentPage.cpp
+LevelOfDetailPage.cpp
+MaterialExportSheet.cpp
+MaterialMapDialog.cpp
+MaterialMapsPage.cpp
+MaterialSelectionPage.cpp
+MeshExportSheet.cpp
+SkeletonExportSheet.cpp
+SkeletonFilePage.cpp
+SkeletonHierarchyPage.cpp
+SpringSystemPage.cpp
+BaseInterface.cpp
+BaseMaterial.cpp
+BaseMesh.cpp
+BaseNode.cpp
+BoneCandidate.cpp
+Exporter.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\src\exporter.cpp(624) : error C2065: 'CalTransform' : undeclared identifier
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\src\exporter.cpp(624) : error C2955: 'vector' : use of class template requires template argument list
+        c:\users\mozun\desktop\cal3d\vc6.0green\vc98\include\vector(244) : see declaration of 'vector'
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\src\exporter.cpp(624) : error C2133: 'poses' : unknown size
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\src\exporter.cpp(624) : error C2512: 'vector' : no appropriate default constructor available
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\src\exporter.cpp(624) : error C2262: 'poses' : cannot be destroyed
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\src\exporter.cpp(625) : error C2660: 'resize' : function does not take 1 parameters
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\src\exporter.cpp(672) : error C2065: 'pose_coord_sys' : undeclared identifier
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\src\exporter.cpp(672) : error C2678: binary '[' : no operator defined which takes a left-hand operand of type 'class std::vector' (or there is no acceptable conversion)
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\src\exporter.cpp(673) : error C2228: left of '.getTranslation' must have class/struct/union type
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\src\exporter.cpp(673) : error C2228: left of '.getRotation' must have class/struct/union type
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\src\exporter.cpp(704) : error C2039: 'setPoses' : is not a member of 'CalCoreAnimation'
+        c:\users\mozun\desktop\cal3d\cal3d-0.11.0\src\cal3d\coreanimation.h(22) : see declaration of 'CalCoreAnimation'
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\src\exporter.cpp(705) : error C2039: 'setTrackAssignments' : is not a member of 'CalCoreAnimation'
+        c:\users\mozun\desktop\cal3d\cal3d-0.11.0\src\cal3d\coreanimation.h(22) : see declaration of 'CalCoreAnimation'
+Lodder.cpp
+Generating Code...
+Compiling...
+MaterialCandidate.cpp
+MaterialLibraryCandidate.cpp
+MeshCandidate.cpp
+Quadric.cpp
+SkeletonCandidate.cpp
+StdAfx.cpp
+SubmeshCandidate.cpp
+VertexCandidate.cpp
+cal3d_maya_exporter.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\mayainterface.h(15) : fatal error C1083: Cannot open include file: 'maya/MGlobal.h': No such file or directory
+MayaInterface.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\mayainterface.h(15) : fatal error C1083: Cannot open include file: 'maya/MGlobal.h': No such file or directory
+MayaMaterial.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\mayamaterial.h(18) : fatal error C1083: Cannot open include file: 'maya/MObject.h': No such file or directory
+MayaMesh.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\mayamesh.h(18) : fatal error C1083: Cannot open include file: 'maya/MDagPath.h': No such file or directory
+MayaNode.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\cal3d_maya_exporter\mayanode.h(18) : fatal error C1083: Cannot open include file: 'maya/MGlobal.h': No such file or directory
+Generating Code...
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+cal3dExport.mll - 1 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_milk_exporter - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x807 /fo"Release/cal3d_milk_exporter.res" /d "NDEBUG" /d "_AFXDLL" "C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\cal3d_milk_exporter.rc"" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP231E.tmp" with contents
+[
+/nologo /MD /W3 /GR /GX /O2 /I "C:\Programme\MilkShape 3D\SDK\msLib" /I "..\src" /I "..\src\win32" /I "..\..\src" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Release/cal3d_milk_exporter.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\AnimationExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\AnimationTimePage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseInterface.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseMaterial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseMesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseNode.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\BoneAssignmentPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BoneCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\cal3d_milk_exporter.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\LevelOfDetailPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Lodder.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MaterialCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MaterialLibraryCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialMapDialog.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialMapsPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialSelectionPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MeshCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MeshExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\MilkBoneNode.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\MilkExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\MilkInterface.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\MilkMaterial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\MilkMesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\MilkMeshNode.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Quadric.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SelectionDialog.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\SkeletonCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonFilePage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonHierarchyPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SpringSystemPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\SubmeshCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\VertexCandidate.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP231E.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP231F.tmp" with contents
+[
+/nologo /MD /W3 /GR /GX /O2 /I "C:\Programme\MilkShape 3D\SDK\msLib" /I "..\src" /I "..\src\win32" /I "..\..\src" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Release/cal3d_milk_exporter.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP231F.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP2320.tmp" with contents
+[
+msModelLib.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"Release/msCal3D.pdb" /machine:I386 /def:".\cal3d_milk_exporter.def" /out:"..\..\bin\Release\msCal3D.dll" /implib:"Release/msCal3D.lib" /libpath:"..\..\cal3d\Release" /libpath:"C:\Programme\MilkShape 3D\SDK\msLib\lib" 
+".\Release\AnimationExportSheet.obj"
+".\Release\AnimationTimePage.obj"
+".\Release\BaseInterface.obj"
+".\Release\BaseMaterial.obj"
+".\Release\BaseMesh.obj"
+".\Release\BaseNode.obj"
+".\Release\BoneAssignmentPage.obj"
+".\Release\BoneCandidate.obj"
+".\Release\cal3d_milk_exporter.obj"
+".\Release\Exporter.obj"
+".\Release\LevelOfDetailPage.obj"
+".\Release\Lodder.obj"
+".\Release\MaterialCandidate.obj"
+".\Release\MaterialExportSheet.obj"
+".\Release\MaterialLibraryCandidate.obj"
+".\Release\MaterialMapDialog.obj"
+".\Release\MaterialMapsPage.obj"
+".\Release\MaterialSelectionPage.obj"
+".\Release\MeshCandidate.obj"
+".\Release\MeshExportSheet.obj"
+".\Release\MilkBoneNode.obj"
+".\Release\MilkExport.obj"
+".\Release\MilkInterface.obj"
+".\Release\MilkMaterial.obj"
+".\Release\MilkMesh.obj"
+".\Release\MilkMeshNode.obj"
+".\Release\Quadric.obj"
+".\Release\SelectionDialog.obj"
+".\Release\SkeletonCandidate.obj"
+".\Release\SkeletonExportSheet.obj"
+".\Release\SkeletonFilePage.obj"
+".\Release\SkeletonHierarchyPage.obj"
+".\Release\SpringSystemPage.obj"
+".\Release\StdAfx.obj"
+".\Release\SubmeshCandidate.obj"
+".\Release\VertexCandidate.obj"
+".\Release\cal3d_milk_exporter.res"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Release\cal3d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP2320.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\StdAfx.h(45) : fatal error C1083: Cannot open include file: 'msPlugIn.h': No such file or directory
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+msCal3D.dll - 1 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_milk_exporter - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x807 /fo"Debug/cal3d_milk_exporter.res" /d "_DEBUG" /d "_AFXDLL" "C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\cal3d_milk_exporter.rc"" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP2592.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GR /GX /ZI /Od /I "C:\Programme\MilkShape 3D\SDK\msLib" /I "..\src" /I "..\src\win32" /I "..\..\src" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Debug/cal3d_milk_exporter.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\AnimationExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\AnimationTimePage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseInterface.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseMaterial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseMesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BaseNode.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\BoneAssignmentPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\BoneCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\cal3d_milk_exporter.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Exporter.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\LevelOfDetailPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Lodder.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MaterialCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MaterialLibraryCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialMapDialog.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialMapsPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MaterialSelectionPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\MeshCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\MeshExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\MilkBoneNode.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\MilkExport.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\MilkInterface.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\MilkMaterial.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\MilkMesh.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\MilkMeshNode.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\Quadric.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SelectionDialog.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\SkeletonCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonExportSheet.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonFilePage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SkeletonHierarchyPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\win32\SpringSystemPage.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\SubmeshCandidate.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\src\VertexCandidate.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP2592.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP2593.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GR /GX /ZI /Od /I "C:\Programme\MilkShape 3D\SDK\msLib" /I "..\src" /I "..\src\win32" /I "..\..\src" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /Fp"Debug/cal3d_milk_exporter.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP2593.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP2594.tmp" with contents
+[
+msModelLib.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/msCal3D.pdb" /debug /machine:I386 /def:".\cal3d_milk_exporter.def" /out:"..\..\bin\Debug\msCal3D.dll" /implib:"Debug/msCal3D.lib" /pdbtype:sept /libpath:"..\..\cal3d\Debug" /libpath:"C:\Programme\MilkShape 3D\SDK\msLib\lib" 
+".\Debug\AnimationExportSheet.obj"
+".\Debug\AnimationTimePage.obj"
+".\Debug\BaseInterface.obj"
+".\Debug\BaseMaterial.obj"
+".\Debug\BaseMesh.obj"
+".\Debug\BaseNode.obj"
+".\Debug\BoneAssignmentPage.obj"
+".\Debug\BoneCandidate.obj"
+".\Debug\cal3d_milk_exporter.obj"
+".\Debug\Exporter.obj"
+".\Debug\LevelOfDetailPage.obj"
+".\Debug\Lodder.obj"
+".\Debug\MaterialCandidate.obj"
+".\Debug\MaterialExportSheet.obj"
+".\Debug\MaterialLibraryCandidate.obj"
+".\Debug\MaterialMapDialog.obj"
+".\Debug\MaterialMapsPage.obj"
+".\Debug\MaterialSelectionPage.obj"
+".\Debug\MeshCandidate.obj"
+".\Debug\MeshExportSheet.obj"
+".\Debug\MilkBoneNode.obj"
+".\Debug\MilkExport.obj"
+".\Debug\MilkInterface.obj"
+".\Debug\MilkMaterial.obj"
+".\Debug\MilkMesh.obj"
+".\Debug\MilkMeshNode.obj"
+".\Debug\Quadric.obj"
+".\Debug\SelectionDialog.obj"
+".\Debug\SkeletonCandidate.obj"
+".\Debug\SkeletonExportSheet.obj"
+".\Debug\SkeletonFilePage.obj"
+".\Debug\SkeletonHierarchyPage.obj"
+".\Debug\SpringSystemPage.obj"
+".\Debug\StdAfx.obj"
+".\Debug\SubmeshCandidate.obj"
+".\Debug\VertexCandidate.obj"
+".\Debug\cal3d_milk_exporter.res"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Debug\cal3d_d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP2594.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\plugins\cal3d_milk_exporter\stdafx.h(45) : fatal error C1083: Cannot open include file: 'msPlugIn.h': No such file or directory
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+msCal3D.dll - 1 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_miniviewer_d3d - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP2806.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /I "..\..\src" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/cal3d_miniviewer_d3d.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d\src\main.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d\src\tick.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d\src\viewer.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP2806.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP2816.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib d3d9.lib d3dx9.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/cal3d_miniviewer_d3d.pdb" /machine:I386 /out:"../../bin/Release/cal3d_miniviewer_d3d.exe" /libpath:"../cal3d/release" 
+".\Release\main.obj"
+".\Release\tick.obj"
+".\Release\viewer.obj"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Release\cal3d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP2816.tmp"
+<h3>Output Window</h3>
+Compiling...
+main.cpp
+tick.cpp
+viewer.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d\src\viewer.cpp(510) : error C2660: 'D3DXCreateFont' : function does not take 12 parameters
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d\src\viewer.cpp(724) : error C2660: 'DrawTextA' : function does not take 6 parameters
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+cal3d_miniviewer_d3d.exe - 1 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_miniviewer_d3d - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP2CF9.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "..\..\src" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/cal3d_miniviewer_d3d.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d\src\main.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d\src\tick.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d\src\viewer.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP2CF9.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP2CFA.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib d3d9.lib d3dx9d.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/cal3d_miniviewer_d3d.pdb" /debug /machine:I386 /out:"../../bin/Debug/cal3d_miniviewer_d3d.exe" /pdbtype:sept /libpath:"../cal3d/debug" 
+".\Debug\main.obj"
+".\Debug\tick.obj"
+".\Debug\viewer.obj"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Debug\cal3d_d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP2CFA.tmp"
+<h3>Output Window</h3>
+Compiling...
+main.cpp
+tick.cpp
+viewer.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d\src\viewer.cpp(510) : error C2660: 'D3DXCreateFont' : function does not take 12 parameters
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d\src\viewer.cpp(724) : error C2660: 'DrawTextA' : function does not take 6 parameters
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+cal3d_miniviewer_d3d.exe - 1 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_miniviewer_d3d_bump - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP323B.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /I "..\..\src" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/cal3d_miniviewer_d3d_bump.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_bump\src\main.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_bump\src\tick.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_bump\src\viewer.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP323B.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP323C.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib d3d9.lib d3dx9.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/cal3d_miniviewer_d3d_bump.pdb" /machine:I386 /out:"../../bin/Release/cal3d_miniviewer_d3d_bump.exe" /libpath:"../cal3d/release" 
+".\Release\main.obj"
+".\Release\tick.obj"
+".\Release\viewer.obj"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Release\cal3d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP323C.tmp"
+<h3>Output Window</h3>
+Compiling...
+main.cpp
+tick.cpp
+viewer.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_bump\src\viewer.cpp(606) : error C2660: 'D3DXCreateFont' : function does not take 12 parameters
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_bump\src\viewer.cpp(949) : error C2660: 'DrawTextA' : function does not take 6 parameters
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+cal3d_miniviewer_d3d_bump.exe - 1 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_miniviewer_d3d_bump - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP3692.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "..\..\src" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/cal3d_miniviewer_d3d_bump.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_bump\src\main.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_bump\src\tick.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_bump\src\viewer.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP3692.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP3693.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib d3d9.lib d3dx9d.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/cal3d_miniviewer_d3d_bump.pdb" /debug /machine:I386 /out:"../../bin/Debug/cal3d_miniviewer_d3d_bump.exe" /pdbtype:sept /libpath:"../cal3d/debug" 
+".\Debug\main.obj"
+".\Debug\tick.obj"
+".\Debug\viewer.obj"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Debug\cal3d_d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP3693.tmp"
+<h3>Output Window</h3>
+Compiling...
+main.cpp
+tick.cpp
+viewer.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_bump\src\viewer.cpp(606) : error C2660: 'D3DXCreateFont' : function does not take 12 parameters
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_bump\src\viewer.cpp(949) : error C2660: 'DrawTextA' : function does not take 6 parameters
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+cal3d_miniviewer_d3d_bump.exe - 1 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_miniviewer_d3d_vs - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP3C41.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /I "..\..\src" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Release/cal3d_miniviewer_d3d_vs.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_vs\src\main.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_vs\src\tick.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_vs\src\viewer.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP3C41.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP3C42.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib d3d9.lib d3dx9.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/cal3d_miniviewer_d3d_vs.pdb" /machine:I386 /out:"../../bin/Release/cal3d_miniviewer_d3d_vs.exe" /libpath:"../cal3d/release" 
+".\Release\main.obj"
+".\Release\tick.obj"
+".\Release\viewer.obj"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Release\cal3d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP3C42.tmp"
+<h3>Output Window</h3>
+Compiling...
+main.cpp
+tick.cpp
+viewer.cpp
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_vs\src\viewer.cpp(712) : error C2660: 'D3DXCreateFont' : function does not take 12 parameters
+C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_vs\src\viewer.cpp(941) : error C2660: 'DrawTextA' : function does not take 6 parameters
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+cal3d_miniviewer_d3d_vs.exe - 1 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_miniviewer_d3d_vs - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP4099.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "..\cal3d\src" /I "..\..\src" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/cal3d_miniviewer_d3d_vs.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_vs\src\main.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_vs\src\tick.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_vs\src\viewer.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP4099.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP409A.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib d3d9.lib d3dx9d.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/cal3d_miniviewer_d3d_vs.pdb" /debug /machine:I386 /out:"../../bin/Debug/cal3d_miniviewer_d3d_vs.exe" /pdbtype:sept /libpath:"../cal3d/debug" 
+".\Debug\main.obj"
+".\Debug\tick.obj"
+".\Debug\viewer.obj"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Debug\cal3d_d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP409A.tmp"
+<h3>Output Window</h3>
+Compiling...
+main.cpp
+tick.cpp
+viewer.cpp
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_vs\src\viewer.cpp(712) : error C2660: 'D3DXCreateFont' : function does not take 12 parameters
+c:\users\mozun\desktop\cal3d\cal3d-0.11.0\examples\miniviewer_d3d_vs\src\viewer.cpp(941) : error C2660: 'DrawTextA' : function does not take 6 parameters
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+cal3d_miniviewer_d3d_vs.exe - 1 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_miniviewer_gl_vp - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP4609.tmp" with contents
+[
+/nologo /ML /W3 /GX /O2 /I "..\..\src" /I "src" /D "NDEBUG" /D "WIN32" /D "_CONSOLE" /D "_MBCS" /D "GLEW_STATIC" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_gl_vp\src\glew.c"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_gl_vp\src\main.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_gl_vp\src\tga.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_gl_vp\src\tick.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_gl_vp\src\viewer.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP4609.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP460A.tmp" with contents
+[
+glut32.lib glu32.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:no /pdb:"Release/cal3d_miniviewer_gl_vp.pdb" /machine:I386 /out:"../../bin/Release/cal3d_miniviewer_gl_vp.exe" /libpath:"..\cal3d\Release" 
+".\Release\glew.obj"
+".\Release\main.obj"
+".\Release\tga.obj"
+".\Release\tick.obj"
+".\Release\viewer.obj"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Release\cal3d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP460A.tmp"
+<h3>Output Window</h3>
+Compiling...
+glew.c
+Generating Code...
+Compiling...
+main.cpp
+tga.cpp
+tick.cpp
+viewer.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+cal3d_miniviewer_gl_vp.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: cal3d_miniviewer_gl_vp - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP4C93.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /I "..\..\src" /I "src" /D "_DEBUG" /D "WIN32" /D "_CONSOLE" /D "_MBCS" /D "GLEW_STATIC" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_gl_vp\src\glew.c"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_gl_vp\src\main.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_gl_vp\src\tga.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_gl_vp\src\tick.cpp"
+"C:\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\examples\miniviewer_gl_vp\src\viewer.cpp"
+]
+Creating command line "cl.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP4C93.tmp" 
+Creating temporary file "C:\Users\MOZUN\AppData\Local\Temp\RSP4C94.tmp" with contents
+[
+glut32.lib glu32.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/cal3d_miniviewer_gl_vp.pdb" /debug /machine:I386 /out:"../../bin/Debug/cal3d_miniviewer_gl_vp.exe" /pdbtype:sept /libpath:"..\cal3d\Debug" 
+".\Debug\glew.obj"
+".\Debug\main.obj"
+".\Debug\tga.obj"
+".\Debug\tick.obj"
+".\Debug\viewer.obj"
+"\Users\MOZUN\Desktop\cal3d\cal3d-0.11.0\bin\Debug\cal3d_d.lib"
+]
+Creating command line "link.exe @C:\Users\MOZUN\AppData\Local\Temp\RSP4C94.tmp"
+<h3>Output Window</h3>
+Compiling...
+glew.c
+Generating Code...
+Compiling...
+main.cpp
+c:\users\mozun\desktop\cal3d\vc6.0green\vc98\include\vector(60) : warning C4786: 'std::reverse_iterator<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > const *,std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> >,std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > const &,std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > const *,int>' : identifier was truncated to '255' characters in the debug information
+        c:\users\mozun\desktop\cal3d\vc6.0green\vc98\include\vector(58) : while compiling class-template member function '__thiscall std::vector<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> >,std::allocator<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > > >::~std::vector<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> >,std::allocator<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > > >(void)'
+c:\users\mozun\desktop\cal3d\vc6.0green\vc98\include\vector(60) : warning C4786: 'std::reverse_iterator<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > *,std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> >,std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > &,std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > *,int>' : identifier was truncated to '255' characters in the debug information
+        c:\users\mozun\desktop\cal3d\vc6.0green\vc98\include\vector(58) : while compiling class-template member function '__thiscall std::vector<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> >,std::allocator<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > > >::~std::vector<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> >,std::allocator<std::vector<CalSubmesh::TangentSpace,std::allocator<CalSubmesh::TangentSpace> > > >(void)'
+tga.cpp
+tick.cpp
+viewer.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+cal3d_miniviewer_gl_vp.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
