@@ -21,6 +21,7 @@
 #include "menu.h"
 #include "tga.h"
 
+using namespace cal3d;
 //----------------------------------------------------------------------------//
 // Static member variables initialization                                     //
 //----------------------------------------------------------------------------//
@@ -254,7 +255,7 @@ bool Model::onInit(const std::string& strFilename)
     // stop if we reached the end of file
     if(file.eof()) break;
 
-    // check if an error happend while reading from the file
+    // check if an error happened while reading from the file
     if(!file)
     {
       std::cerr << "Error while reading from the model configuration file '" << strFilename << "'." << std::endl;
@@ -417,6 +418,57 @@ bool Model::onInit(const std::string& strFilename)
   return true;
 }
 
+int getBoneLinesFromSkeleton(const CalSkeleton *skel, float *pLines)
+{
+	int nrLines;
+	nrLines = 0;
+	const std::vector<CalBone *> & m_vectorBone = skel->getVectorBone();
+	std::vector<CalBone *>::const_iterator iteratorBone;
+	for (iteratorBone = m_vectorBone.begin(); iteratorBone != m_vectorBone.end(); ++iteratorBone)
+	{
+		int parentId;
+		parentId = (*iteratorBone)->getCoreBone()->getParentId();
+
+		if (parentId != -1)
+		{
+			CalBone *pParent;
+			pParent = m_vectorBone[parentId];
+
+			const CalVector& translation = (*iteratorBone)->getTranslationAbsolute();
+			const CalVector& translationParent = pParent->getTranslationAbsolute();
+
+			*pLines++ = translationParent[0];
+			*pLines++ = translationParent[1];
+			*pLines++ = translationParent[2];
+
+			*pLines++ = translation[0];
+			*pLines++ = translation[1];
+			*pLines++ = translation[2];
+
+			nrLines++;
+		}
+	}
+
+	return nrLines;
+}
+int getBonePointsFromSkeleton(const CalSkeleton*skel, float *pPoints)
+{
+	int nrPoints;
+	nrPoints = 0;
+
+	const std::vector<CalBone *> & m_vectorBone = skel->getVectorBone();
+	std::vector<CalBone *>::const_iterator iteratorBone;
+	for (iteratorBone = m_vectorBone.begin(); iteratorBone != m_vectorBone.end(); ++iteratorBone)
+	{
+		const CalVector& translation = (*iteratorBone)->getTranslationAbsolute();
+		*pPoints++ = translation[0];
+		*pPoints++ = translation[1];
+		*pPoints++ = translation[2];
+		nrPoints++;
+	}
+
+	return nrPoints;
+}
 //----------------------------------------------------------------------------//
 // Render the skeleton of the model                                           //
 //----------------------------------------------------------------------------//
@@ -426,8 +478,7 @@ void Model::renderSkeleton()
   // draw the bone lines
   float lines[1024][2][3];
   int nrLines;
-  nrLines =  m_calModel->getSkeleton()->getBoneLines(&lines[0][0][0]);
-//  nrLines = m_calModel->getSkeleton()->getBoneLinesStatic(&lines[0][0][0]);
+  nrLines = getBoneLinesFromSkeleton(m_calModel->getSkeleton(),&lines[0][0][0]);
 
   glLineWidth(3.0f);
   glColor3f(1.0f, 1.0f, 1.0f);
@@ -444,8 +495,7 @@ void Model::renderSkeleton()
   // draw the bone points
   float points[1024][3];
   int nrPoints;
-  nrPoints =  m_calModel->getSkeleton()->getBonePoints(&points[0][0]);
-//  nrPoints = m_calModel->getSkeleton()->getBonePointsStatic(&points[0][0]);
+  nrPoints = getBonePointsFromSkeleton(m_calModel->getSkeleton(),&points[0][0]);
 
   glPointSize(4.0f);
   glBegin(GL_POINTS);
@@ -475,7 +525,7 @@ void Model::renderBoundingBox()
 
    for(size_t boneId=0;boneId<vectorCoreBone.size();++boneId)
    {
-      CalBoundingBox & calBoundingBox  = vectorCoreBone[boneId]->getBoundingBox();
+      const CalBoundingBox & calBoundingBox  = vectorCoreBone[boneId]->getBoundingBox();
 
 	  CalVector p[8];
 	  calBoundingBox.computePoints(p);
@@ -637,7 +687,7 @@ void Model::renderMesh(bool bWireframe, bool bLight)
           glEnable(GL_COLOR_MATERIAL);
 
           // set the texture id we stored in the map user data
-          glBindTexture(GL_TEXTURE_2D, (GLuint)pCalRenderer->getMapUserData(0));
+          glBindTexture(GL_TEXTURE_2D, (GLuint)(size_t)pCalRenderer->getMapUserData(0));
 
           // set the texture coordinate buffer
           glTexCoordPointer(2, GL_FLOAT, 0, &meshTextureCoordinates[0][0]);

@@ -21,6 +21,7 @@
 #include "cal3d/coresubmesh.h"
 #include "cal3d/coresubmorphtarget.h"
 
+using namespace cal3d;
  /*****************************************************************************/
 /** Constructs the core mesh instance.
   *
@@ -29,6 +30,17 @@
 
 CalCoreMesh::CalCoreMesh()
 {
+}
+
+unsigned int
+CalCoreMesh::size()
+{
+  unsigned int r = sizeof( CalCoreMesh );
+  std::vector<CalCoreSubmesh *>::iterator iter1;
+  for( iter1 = m_vectorCoreSubmesh.begin(); iter1 != m_vectorCoreSubmesh.end(); ++iter1 ) {
+    r += (*iter1)->size();
+  }
+  return r;
 }
 
  /*****************************************************************************/
@@ -48,79 +60,28 @@ CalCoreMesh::~CalCoreMesh()
   m_vectorCoreSubmesh.clear();
 }
 
- /*****************************************************************************/
-/** Adds a core submesh.
-  *
-  * This function adds a core submesh to the core mesh instance.
-  *
-  * @param pCoreSubmesh A pointer to the core submesh that should be added.
-  *
-  * @return One of the following values:
-  *         \li the assigned submesh \b ID of the added core submesh
-  *         \li \b -1 if an error happend
-  *****************************************************************************/
-
-int CalCoreMesh::addCoreSubmesh(CalCoreSubmesh *pCoreSubmesh)
-{
-  // get next bone id
-  int submeshId;
-  submeshId = m_vectorCoreSubmesh.size();
-
-  m_vectorCoreSubmesh.push_back(pCoreSubmesh);
-
-  return submeshId;
-}
 
 
  /*****************************************************************************/
-/** Provides access to a core submesh.
+/** Removes a core submesh.
   *
-  * This function returns the core submesh with the given ID.
+  * This function removes a core submesh from the core mesh instance.
   *
-  * @param id The ID of the core submesh that should be returned.
+  * @param submesh ID of the core submesh that should be removed.
   *
-  * @return One of the following values:
-  *         \li a pointer to the core submesh
-  *         \li \b 0 if an error happend
   *****************************************************************************/
-
-CalCoreSubmesh *CalCoreMesh::getCoreSubmesh(int id)
+void CalCoreMesh::removeCoreSubmesh( int submeshID )
 {
-  if((id < 0) || (id >= (int)m_vectorCoreSubmesh.size()))
-  {
-    CalError::setLastError(CalError::INVALID_HANDLE, __FILE__, __LINE__);
-    return 0;
-  }
+	/*m_vectorCoreSubmesh[ submeshID ] = 0;
+	return;*/
+	if (submeshID >= m_vectorCoreSubmesh.size())return;
 
-  return m_vectorCoreSubmesh[id];
-}
+	//shift vector
+	for (int i = submeshID; i < m_vectorCoreSubmesh.size() - 1; i++){
+		m_vectorCoreSubmesh[i] = m_vectorCoreSubmesh[i + 1];
 
- /*****************************************************************************/
-/** Returns the number of core submeshes.
-  *
-  * This function returns the number of core submeshes in the core mesh
-  * instance.
-  *
-  * @return The number of core submeshes.
-  *****************************************************************************/
-
-int CalCoreMesh::getCoreSubmeshCount()
-{
-  return m_vectorCoreSubmesh.size();
-}
-
- /*****************************************************************************/
-/** Returns the core submesh vector.
-  *
-  * This function returns the vector that contains all core submeshes of the
-  * core mesh instance.
-  *
-  * @return A reference to the core submesh vector.
-  *****************************************************************************/
-
-std::vector<CalCoreSubmesh *>& CalCoreMesh::getVectorCoreSubmesh()
-{
-  return m_vectorCoreSubmesh;
+	}
+	m_vectorCoreSubmesh.pop_back();
 }
 
  /*****************************************************************************/
@@ -130,24 +91,27 @@ std::vector<CalCoreSubmesh *>& CalCoreMesh::getVectorCoreSubmesh()
   * It adds appropriate CalCoreSubMorphTargets to each of the core sub meshes.
   *
   * @param pCoreMesh A pointer to the core mesh that shoulb become a blend target.
+  * @param morphTarget A string to be assigned as the morph target's name
   *
   * @return One of the following values:
   *         \li the assigned morph target \b ID of the added blend target
-  *         \li \b -1 if an error happend
+  *         \li \b -1 if an error happened
   *****************************************************************************/
 
 int CalCoreMesh::addAsMorphTarget(CalCoreMesh *pCoreMesh)
 {
   //Check if the numbers of vertices allow a blending
   std::vector<CalCoreSubmesh *>& otherVectorCoreSubmesh = pCoreMesh->getVectorCoreSubmesh();
+  //int numsubs = getCoreSubmeshCount();
+  //int othernumsubs = pCoreMesh->getCoreSubmeshCount();
   if (m_vectorCoreSubmesh.size() != otherVectorCoreSubmesh.size())
   {
-    CalError::setLastError(CalError::INTERNAL, __FILE__, __LINE__);
+    CalError::setLastError(CalError::INTERNAL, __FILE__, __LINE__, "This mesh has children with a different numbers of submeshes");
     return -1;
   }
   if (m_vectorCoreSubmesh.size() == 0)
   {
-    CalError::setLastError(CalError::INTERNAL, __FILE__, __LINE__);
+    CalError::setLastError(CalError::INTERNAL, __FILE__, __LINE__, "Mesh has no submeshes");
     return -1;
   }
   std::vector<CalCoreSubmesh *>::iterator iteratorCoreSubmesh = m_vectorCoreSubmesh.begin();
@@ -155,9 +119,14 @@ int CalCoreMesh::addAsMorphTarget(CalCoreMesh *pCoreMesh)
   int subMorphTargetID = (*iteratorCoreSubmesh)->getCoreSubMorphTargetCount();
   while(iteratorCoreSubmesh != m_vectorCoreSubmesh.end())
   {
-    if((*iteratorCoreSubmesh)->getVertexCount() != (*otherIteratorCoreSubmesh)->getVertexCount())
+	int count1 = (*iteratorCoreSubmesh)->getVertexCount();
+	int count2 = (*otherIteratorCoreSubmesh)->getVertexCount();
+
+    if( count1 != count2 )
     {
-      CalError::setLastError(CalError::INTERNAL, __FILE__, __LINE__);
+		char buf[2048];
+		snprintf(buf, sizeof(buf), "This mesh has a morph target child with different number of vertices: %d (%d vs child's %d)", subMorphTargetID, count1, count2);
+      CalError::setLastError(CalError::INTERNAL, __FILE__, __LINE__, buf);
       return -1;
     }
     ++iteratorCoreSubmesh;
@@ -169,24 +138,37 @@ int CalCoreMesh::addAsMorphTarget(CalCoreMesh *pCoreMesh)
   while(iteratorCoreSubmesh != m_vectorCoreSubmesh.end())
   {
     int vertexCount = (*otherIteratorCoreSubmesh)->getVertexCount();
-    CalCoreSubMorphTarget *pCalCoreSubMorphTarget = new CalCoreSubMorphTarget();
+    CalCoreSubMorphTarget *pCalCoreSubMorphTarget = new(std::nothrow) CalCoreSubMorphTarget();
     if(!pCalCoreSubMorphTarget->reserve(vertexCount)) return -1;
     std::vector<CalCoreSubmesh::Vertex>& vectorVertex = (*otherIteratorCoreSubmesh)->getVectorVertex();
     std::vector<CalCoreSubmesh::Vertex>::iterator iteratorVectorVertex = vectorVertex.begin();
+    std::vector<std::vector<CalCoreSubmesh::TextureCoordinate> >& textCoordVector = (*otherIteratorCoreSubmesh)->getVectorVectorTextureCoordinate();
+    std::vector<CalCoreSubmesh::Vertex>& originVectorVertex = (*iteratorCoreSubmesh)->getVectorVertex();
     for(int i = 0;i<vertexCount;++i)
     {
       CalCoreSubMorphTarget::BlendVertex blendVertex;
-      blendVertex.position = (*iteratorVectorVertex).position;
-      blendVertex.normal = (*iteratorVectorVertex).normal;
+      ///different than IMVU: blendvertex store in vertex coord
+      blendVertex.position = (*iteratorVectorVertex).position-originVectorVertex[i].position;
+      blendVertex.normal = (*iteratorVectorVertex).normal- originVectorVertex[i].normal;
+      blendVertex.textureCoords.clear();
+      blendVertex.textureCoords.reserve(textCoordVector.size());
+      for( unsigned int tcI = 0; tcI < textCoordVector.size(); tcI++ )
+      {
+        blendVertex.textureCoords.push_back(textCoordVector[tcI][i]);
+      }
+
       if(!pCalCoreSubMorphTarget->setBlendVertex(i,blendVertex)) return -1;
+
       ++iteratorVectorVertex;
     }
     (*iteratorCoreSubmesh)->addCoreSubMorphTarget(pCalCoreSubMorphTarget);
     ++iteratorCoreSubmesh;
     ++otherIteratorCoreSubmesh;
   }
+  ///store morphid as a mesh attribute
   return subMorphTargetID;
 }
+
 
  /*****************************************************************************/
 /** Scale the Mesh.
@@ -197,66 +179,13 @@ int CalCoreMesh::addAsMorphTarget(CalCoreMesh *pCoreMesh)
   *
   *****************************************************************************/
 
-
 void CalCoreMesh::scale(float factor)
 {
 	std::vector<CalCoreSubmesh *>::iterator iteratorCoreSubmesh;
 	for(iteratorCoreSubmesh = m_vectorCoreSubmesh.begin(); iteratorCoreSubmesh != m_vectorCoreSubmesh.end(); ++iteratorCoreSubmesh)
 	{
-		(*iteratorCoreSubmesh)->scale(factor);    
+		(*iteratorCoreSubmesh)->scale(factor);
 	}
 }
 
- /*****************************************************************************/
-/** 
-  * Set the name of the file in which the core mesh is stored, if any.
-  *
-  * @param filename The path of the file.
-  *****************************************************************************/
 
-void CalCoreMesh::setFilename(const std::string& filename)
-{
-  m_filename = filename;
-}
-
- /*****************************************************************************/
-/** 
-  * Get the name of the file in which the core mesh is stored, if any.
-  *
-  * @return One of the following values:
-  *         \li \b empty string if the mesh was not stored in a file
-  *         \li \b the path of the file
-  *
-  *****************************************************************************/
-
-const std::string& CalCoreMesh::getFilename(void)
-{
-  return m_filename;
-}
-
- /*****************************************************************************/
-/** 
-  * Set the symbolic name of the core mesh.
-  *
-  * @param name A symbolic name.
-  *****************************************************************************/
-
-void CalCoreMesh::setName(const std::string& name)
-{
-  m_name = name;
-}
-
- /*****************************************************************************/
-/** 
-  * Get the symbolic name the core mesh.
-  *
-  * @return One of the following values:
-  *         \li \b empty string if the mesh was no associated to a symbolic name
-  *         \li \b the symbolic name
-  *
-  *****************************************************************************/
-
-const std::string& CalCoreMesh::getName(void)
-{
-  return m_name;
-}

@@ -7,7 +7,6 @@
 // Software Foundation; either version 2 of the License, or (at your option)  //
 // any later version.                                                         //
 //----------------------------------------------------------------------------//
-
 #ifndef STDAFX_H
 #define STDAFX_H
 
@@ -20,8 +19,7 @@
 #pragma warning(disable : 4786)
 #endif
 
-#define WINVER 0x0400
-
+#define WINVER 0x0602
 //----------------------------------------------------------------------------//
 // Includes                                                                   //
 //----------------------------------------------------------------------------//

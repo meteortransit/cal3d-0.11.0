@@ -56,12 +56,15 @@ libcal3d_la_SOURCES = \
 	bone.cpp \
 	buffersource.cpp \
 	cal3d_wrapper.cpp \
+	coreanimatedmorph.cpp \
 	coreanimation.cpp \
 	corebone.cpp \
 	corekeyframe.cpp \
 	corematerial.cpp \
 	coremesh.cpp \
 	coremodel.cpp \
+	coremorphkeyframe.cpp \
+	coremorphtrack.cpp \
 	coreskeleton.cpp \
 	coresubmesh.cpp \
 	coresubmorphtarget.cpp \
@@ -76,6 +79,8 @@ libcal3d_la_SOURCES = \
 	model.cpp \
 	morphtargetmixer.cpp \
 	physique.cpp \
+	physiquedualquaternion.cpp \
+	dualquaternion.cpp \
 	platform.cpp \
 	quaternion.cpp \
 	renderer.cpp \
@@ -88,7 +93,7 @@ libcal3d_la_SOURCES = \
 	tinyxml.cpp \
 	tinyxmlerror.cpp \
 	tinyxmlparser.cpp \
-	coremorphanimation.cpp
+	xmlformat.cpp
 
 libcal3d_la_LDFLAGS = -no-undefined -version-info $(VERSION_INFO) 
 
@@ -101,12 +106,15 @@ pkginclude_HEADERS = \
 	buffersource.h \
 	cal3d.h \
 	cal3d_wrapper.h \
+	coreanimatedmorph.h \
 	coreanimation.h \
 	corebone.h \
 	corekeyframe.h \
 	corematerial.h \
 	coremesh.h \
 	coremodel.h \
+	coremorphkeyframe.h \
+	coremorphtrack.h \
 	coreskeleton.h \
 	coresubmesh.h \
 	coresubmorphtarget.h \
@@ -122,6 +130,8 @@ pkginclude_HEADERS = \
 	model.h \
 	morphtargetmixer.h \
 	physique.h \
+	physiquedualquaternion.h \
+	dualquaternion.h \
 	platform.h \
 	quaternion.h \
 	refcounted.h \
@@ -136,7 +146,8 @@ pkginclude_HEADERS = \
 	vector.h \
 	tinyxml.h \
 	transform.h \
-	coremorphanimation.h
+	xmlformat.h
+
 
 # *************************************************************************
 

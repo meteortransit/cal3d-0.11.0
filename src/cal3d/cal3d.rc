@@ -49,7 +49,7 @@ BEGIN
             VALUE "FileDescription", "Cal3D - 3d character animation library\0"
             VALUE "FileVersion", "0.11.0rc1\0"
             VALUE "InternalName", "Cal3D\0"
-            VALUE "LegalCopyright", "Copyright © 2001-2005 Cal3D Team\0"
+            VALUE "LegalCopyright", "Copyright ?2001-2005 Cal3D Team\0"
             VALUE "LegalTrademarks", "GNU Lesser General Public License\0"
             VALUE "OriginalFilename", "cal3d.dll\0"
             VALUE "PrivateBuild", "\0"

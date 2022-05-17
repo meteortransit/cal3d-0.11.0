@@ -8,6 +8,22 @@
 // any later version.                                                         //
 //----------------------------------------------------------------------------//
 
+#ifndef WIN32
+//Inconsistency detected by ld.so: dl-version.c: 224: _dl_check_map_versions: Assertion `needed != ((void *)0)' failed!
+///http://stackoverflow.com/questions/20007961/error-running-a-compiled-c-file-uses-opengl-error-inconsistency-detected
+//if you find better solution let me know...:/
+#include <string.h>
+#include <stdint.h>
+#include <pthread.h>
+void junk() {
+  int i;
+  i=pthread_getconcurrency();
+};
+#endif
+
+#ifdef HAVE_CONFIG_H
+#include "config.h"
+#endif
 #if defined(_MSC_VER) && _MSC_VER <= 0x0600
 #pragma warning(disable : 4786)
 #endif
@@ -147,7 +163,7 @@ bool Demo::loadTexture(const std::string& strFilename, GLuint& pId)
     int depth;
     file.read((char *)&depth, 4);
 
-    // check if an error has happend
+    // check if an error has happened
     if(!file)
     {
       std::cerr << "Error while readinf from texture file '" << strFilename << "'." << std::endl;

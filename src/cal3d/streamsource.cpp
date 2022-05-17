@@ -20,6 +20,7 @@
 #include "cal3d/error.h"
 #include "cal3d/platform.h"
 
+using namespace cal3d;
  /*****************************************************************************/
 /** Constructs a stream source instance from an existing istream.
   *
@@ -83,7 +84,7 @@ void CalStreamSource::setError() const
   *
   * @return One of the following values:
   *         \li \b true if successful
-  *         \li \b false if an error happend
+  *         \li \b false if an error happened
   *****************************************************************************/
 
 bool CalStreamSource::readBytes(void* pBuffer, int length)
@@ -104,7 +105,7 @@ bool CalStreamSource::readBytes(void* pBuffer, int length)
   *
   * @return One of the following values:
   *         \li \b true if successful
-  *         \li \b false if an error happend
+  *         \li \b false if an error happened
   *****************************************************************************/
 
 bool CalStreamSource::readFloat(float& value)
@@ -115,7 +116,27 @@ bool CalStreamSource::readFloat(float& value)
    return CalPlatform::readFloat( *mInputStream, value );
 }
 
- /*****************************************************************************/
+/*****************************************************************************/
+/** Reads a short.
+  *
+  * This function reads a short from this data source.
+  *
+  * @param value A reference to the short into which the data is read.
+  *
+  * @return One of the following values:
+  *         \li \b true if successful
+  *         \li \b false if an error happened
+  *****************************************************************************/
+
+bool CalStreamSource::readShort(short& value)
+{
+   //Check that the stream is usable
+   if (!ok()) return false;
+
+   return CalPlatform::readShort( *mInputStream, value );
+}
+
+/*****************************************************************************/
 /** Reads an integer.
   *
   * This function reads an integer from this data source.
@@ -124,7 +145,7 @@ bool CalStreamSource::readFloat(float& value)
   *
   * @return One of the following values:
   *         \li \b true if successful
-  *         \li \b false if an error happend
+  *         \li \b false if an error happened
   *****************************************************************************/
 
 bool CalStreamSource::readInteger(int& value)
@@ -144,7 +165,7 @@ bool CalStreamSource::readInteger(int& value)
   *
   * @return One of the following values:
   *         \li \b true if successful
-  *         \li \b false if an error happend
+  *         \li \b false if an error happened
   *****************************************************************************/
 
 bool CalStreamSource::readString(std::string& strValue)

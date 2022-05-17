@@ -29,7 +29,7 @@ class CSkeletonCandidate;
 //----------------------------------------------------------------------------//
 // Class declaration                                                          //
 //----------------------------------------------------------------------------//
-
+using namespace cal3d;
 class CExporter
 {
 // member variables

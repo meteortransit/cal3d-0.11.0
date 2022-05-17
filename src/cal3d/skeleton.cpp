@@ -23,13 +23,14 @@
 #include "cal3d/coremodel.h"
 #include "cal3d/corebone.h" // DEBUG
 
+using namespace cal3d;
  /*****************************************************************************/
 /** Constructs the skeleton instance.
   *
   * This function is the default constructor of the skeleton instance.
   *****************************************************************************/
 
-CalSkeleton::CalSkeleton(CalCoreSkeleton* pCoreSkeleton)
+CalSkeleton::CalSkeleton(CalCoreSkeleton *pCoreSkeleton)
   : m_pCoreSkeleton(0)
   , m_isBoundingBoxesComputed(false)
 {
@@ -84,9 +85,9 @@ CalSkeleton::~CalSkeleton()
 void CalSkeleton::calculateState()
 {
   // calculate all bone states of the skeleton
-  std::vector<int>& listRootCoreBoneId = m_pCoreSkeleton->getVectorRootCoreBoneId();
+  const std::vector<int>& listRootCoreBoneId = m_pCoreSkeleton->getVectorRootCoreBoneId();
 
-  std::vector<int>::iterator iteratorRootBoneId;
+  std::vector<int>::const_iterator iteratorRootBoneId;
   for(iteratorRootBoneId = listRootCoreBoneId.begin(); iteratorRootBoneId != listRootCoreBoneId.end(); ++iteratorRootBoneId)
   {
     m_vectorBone[*iteratorRootBoneId]->calculateState();
@@ -111,55 +112,7 @@ void CalSkeleton::clearState()
   }
   m_isBoundingBoxesComputed=false;
 }
-
-
- /*****************************************************************************/
-/** Provides access to a bone.
-  *
-  * This function returns the bone with the given ID.
-  *
-  * @param boneId The ID of the bone that should be returned.
-  *
-  * @return One of the following values:
-  *         \li a pointer to the bone
-  *         \li \b 0 if an error happend
-  *****************************************************************************/
-
-CalBone *CalSkeleton::getBone(int boneId) const
-{
-  return m_vectorBone[boneId];
-}
-
- /*****************************************************************************/
-/** Provides access to the core skeleton.
-  *
-  * This function returns the core skeleton on which this skeleton instance is
-  * based on.
-  *
-  * @return One of the following values:
-  *         \li a pointer to the core skeleton
-  *         \li \b 0 if an error happend
-  *****************************************************************************/
-
-CalCoreSkeleton *CalSkeleton::getCoreSkeleton() const
-{
-  return m_pCoreSkeleton;
-}
-
- /*****************************************************************************/
-/** Returns the bone vector.
-  *
-  * This function returns the vector that contains all bones of the skeleton
-  * instance.
-  *
-  * @return A reference to the bone vector.
-  *****************************************************************************/
-
-std::vector<CalBone *>& CalSkeleton::getVectorBone()
-{
-  return m_vectorBone;
-}
-
+ 
  /*****************************************************************************/
 /** Locks the state of the skeleton instance.
   *
@@ -247,131 +200,3 @@ void CalSkeleton::calculateBoundingBoxes()
 
 }
 
-
-//****************************************************************************//
-
-
-
-//****************************************************************************//
-//****************************************************************************//
-//****************************************************************************//
-// DEBUG-/TEST-CODE                                                           //
-//****************************************************************************//
-//****************************************************************************//
-//****************************************************************************//
-
-int CalSkeleton::getBonePoints(float *pPoints)
-{
-  int nrPoints;
-  nrPoints = 0;
-
-  std::vector<CalBone *>::iterator iteratorBone;
-  for(iteratorBone = m_vectorBone.begin(); iteratorBone != m_vectorBone.end(); ++iteratorBone)
-  {
-    const CalVector& translation = (*iteratorBone)->getTranslationAbsolute();
-
-    *pPoints++ = translation[0];
-    *pPoints++ = translation[1];
-    *pPoints++ = translation[2];
-
-    nrPoints++;
-  }
-
-  return nrPoints;
-}
-
-int CalSkeleton::getBonePointsStatic(float *pPoints)
-{
-  int nrPoints;
-  nrPoints = 0;
-
-  std::vector<CalBone *>::iterator iteratorBone;
-  for(iteratorBone = m_vectorBone.begin(); iteratorBone != m_vectorBone.end(); ++iteratorBone)
-  {
-    const CalVector& translation = (*iteratorBone)->getCoreBone()->getTranslationAbsolute();
-
-    *pPoints++ = translation[0];
-    *pPoints++ = translation[1];
-    *pPoints++ = translation[2];
-
-    nrPoints++;
-  }
-
-  return nrPoints;
-}
-
-int CalSkeleton::getBoneLines(float *pLines)
-{
-  int nrLines;
-  nrLines = 0;
-
-  std::vector<CalBone *>::iterator iteratorBone;
-  for(iteratorBone = m_vectorBone.begin(); iteratorBone != m_vectorBone.end(); ++iteratorBone)
-  {
-    int parentId;
-    parentId = (*iteratorBone)->getCoreBone()->getParentId();
-
-    if(parentId != -1)
-    {
-      CalBone *pParent;
-      pParent = m_vectorBone[parentId];
-
-      const CalVector& translation = (*iteratorBone)->getTranslationAbsolute();
-      const CalVector& translationParent = pParent->getTranslationAbsolute();
-
-      *pLines++ = translationParent[0];
-      *pLines++ = translationParent[1];
-      *pLines++ = translationParent[2];
-
-      *pLines++ = translation[0];
-      *pLines++ = translation[1];
-      *pLines++ = translation[2];
-
-      nrLines++;
-    }
-  }
-
-  return nrLines;
-}
-
-int CalSkeleton::getBoneLinesStatic(float *pLines)
-{
-  int nrLines;
-  nrLines = 0;
-
-  std::vector<CalBone *>::iterator iteratorBone;
-  for(iteratorBone = m_vectorBone.begin(); iteratorBone != m_vectorBone.end(); ++iteratorBone)
-  {
-    int parentId;
-    parentId = (*iteratorBone)->getCoreBone()->getParentId();
-
-    if(parentId != -1)
-    {
-      CalBone *pParent;
-      pParent = m_vectorBone[parentId];
-
-      const CalVector& translation = (*iteratorBone)->getCoreBone()->getTranslationAbsolute();
-      const CalVector& translationParent = pParent->getCoreBone()->getTranslationAbsolute();
-
-      *pLines++ = translationParent[0];
-      *pLines++ = translationParent[1];
-      *pLines++ = translationParent[2];
-
-      *pLines++ = translation[0];
-      *pLines++ = translation[1];
-      *pLines++ = translation[2];
-
-      nrLines++;
-    }
-  }
-
-  return nrLines;
-}
-
-//****************************************************************************//
-//****************************************************************************//
-//****************************************************************************//
-// END DEBUG-/TEST-CODE                                                       //
-//****************************************************************************//
-//****************************************************************************//
-//****************************************************************************//

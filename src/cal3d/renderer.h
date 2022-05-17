@@ -15,45 +15,50 @@
 #include "cal3d/global.h"
 
 
-class CalModel;
-class CalSubmesh;
+namespace cal3d{
+	class CalModel;
+	class CalSubmesh;
 
+	class CAL3D_API CalRenderer
+	{
+	public:
+		CalRenderer(CalModel *pModel);
+		CalRenderer(CalRenderer *pRenderer);
+		~CalRenderer() { }
 
-class CAL3D_API CalRenderer
-{
-public:
-  CalRenderer(CalModel* pModel);
-  CalRenderer(CalRenderer* pRenderer); 
-  ~CalRenderer() { }
+		bool beginRendering();
+		void endRendering();
+		void getAmbientColor(unsigned char *pColorBuffer) const;
+		void getDiffuseColor(unsigned char *pColorBuffer) const;
+		int getFaceCount() const;
+		int getFaces(CalIndex *pFaceBuffer) const;
+		int getMapCount() const;
+		Cal::UserData getMapUserData(int mapId);
+		const Cal::UserData getMapUserData(int mapId) const;
+		int getMeshCount() const;
+		int getNormals(float *pNormalBuffer, int stride = 0) const;
+		float getShininess() const;
+		void getSpecularColor(unsigned char *pColorBuffer) const;
+		int getSubmeshCount(int meshId) const;
+		int getTextureCoordinates(int mapId, float *pTextureCoordinateBuffer, int stride = 0) const;
+		int getVertexCount() const;
+		int getVertices(float *pVertexBuffer, int stride = 0) const;
+		int getTangentSpaces(int mapId, float *pTangentSpaceBuffer, int stride = 0) const;
+		int getVertColors(float *pVertexBuffer);
+		int getVertColorsAsStandardPixels(unsigned int *pVertexBuffer);
+		int getVerticesAndNormals(float *pVertexBuffer, int stride = 0) const;
+		int getVerticesNormalsAndTexCoords(float *pVertexBuffer, int NumTexCoords = 1) const;
+		bool isTangentsEnabled(int mapId) const;
+		bool selectMeshSubmesh(int meshId, int submeshId);
+		void setNormalization(bool normalize);
+		bool textureCoordinatesForMapValid(int mapId);
+		bool hasNonWhiteVertexColors();
 
-  bool beginRendering();
-  void endRendering();
-  void getAmbientColor(unsigned char *pColorBuffer);
-  void getDiffuseColor(unsigned char *pColorBuffer);
-  int getFaceCount();
-  int getFaces(CalIndex *pFaceBuffer);
-  int getMapCount();
-  Cal::UserData getMapUserData(int mapId);
-  int getMeshCount();
-  int getNormals(float *pNormalBuffer, int stride=0);
-  float getShininess();
-  void getSpecularColor(unsigned char *pColorBuffer);
-  int getSubmeshCount(int meshId);
-  int getTextureCoordinates(int mapId, float *pTextureCoordinateBuffer, int stride=0);
-  int getVertexCount();
-  int getVertices(float *pVertexBuffer, int stride=0);
-  int getTangentSpaces(int mapId, float *pTangentSpaceBuffer, int stride=0);
-  int getVerticesAndNormals(float *pVertexBuffer, int stride=0);
-  int getVerticesNormalsAndTexCoords(float *pVertexBuffer,int NumTexCoords=1);
-  bool isTangentsEnabled(int mapId);
-  bool selectMeshSubmesh(int meshId, int submeshId);
-  void setNormalization(bool normalize);
-
-private:
-  CalModel *m_pModel;
-  CalSubmesh *m_pSelectedSubmesh;
-};
-
+	private:
+		CalModel   *m_pModel;
+		CalSubmesh *m_pSelectedSubmesh;
+	};
+}
 #endif
 
 //****************************************************************************//

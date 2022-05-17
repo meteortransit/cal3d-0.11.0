@@ -24,6 +24,7 @@
 #include "cal3d/coremodel.h"
 #include "cal3d/model.h"
 
+using namespace cal3d;
  /*****************************************************************************/
 /** Constructs the mesh instance.
   *
@@ -31,8 +32,7 @@
   *****************************************************************************/
 
 CalMesh::CalMesh(CalCoreMesh* pCoreMesh)
-  : m_pModel(0)
-  , m_pCoreMesh(0)
+  : m_pCoreMesh(0)
 {
   assert(pCoreMesh);
   m_pCoreMesh = pCoreMesh;
@@ -49,7 +49,7 @@ CalMesh::CalMesh(CalCoreMesh* pCoreMesh)
   // clone every core submesh
   for(int submeshId = 0; submeshId < submeshCount; ++submeshId)
   {
-    m_vectorSubmesh.push_back(new CalSubmesh(vectorCoreSubmesh[submeshId]));
+    m_vectorSubmesh.push_back(new(std::nothrow) CalSubmesh(vectorCoreSubmesh[submeshId]));
   }
 }
 
@@ -80,10 +80,25 @@ CalMesh::~CalMesh()
   *
   * @return One of the following values:
   *         \li a pointer to the core mesh
-  *         \li \b 0 if an error happend
+  *         \li \b 0 if an error happened
   *****************************************************************************/
 
 CalCoreMesh *CalMesh::getCoreMesh()
+{
+  return m_pCoreMesh;
+}
+
+ /*****************************************************************************/
+/** Provides access to the core mesh.
+  *
+  * This function returns the core mesh on which this mesh instance is based on.
+  *
+  * @return One of the following values:
+  *         \li a pointer to the core mesh
+  *         \li \b 0 if an error happened
+  *****************************************************************************/
+
+const CalCoreMesh *CalMesh::getCoreMesh() const
 {
   return m_pCoreMesh;
 }
@@ -97,10 +112,33 @@ CalCoreMesh *CalMesh::getCoreMesh()
   *
   * @return One of the following values:
   *         \li a pointer to the submesh
-  *         \li \b 0 if an error happend
+  *         \li \b 0 if an error happened
   *****************************************************************************/
 
 CalSubmesh *CalMesh::getSubmesh(int id)
+{
+  if((id < 0) || (id >= (int)m_vectorSubmesh.size()))
+  {
+    CalError::setLastError(CalError::INVALID_HANDLE, __FILE__, __LINE__);
+    return 0;
+  }
+
+  return m_vectorSubmesh[id];
+}
+
+ /*****************************************************************************/
+/** Provides access to a submesh.
+  *
+  * This function returns the submesh with the given ID.
+  *
+  * @param id The ID of the submesh that should be returned.
+  *
+  * @return One of the following values:
+  *         \li a pointer to the submesh
+  *         \li \b 0 if an error happened
+  *****************************************************************************/
+
+const CalSubmesh *CalMesh::getSubmesh(int id) const
 {
   if((id < 0) || (id >= (int)m_vectorSubmesh.size()))
   {
@@ -119,7 +157,7 @@ CalSubmesh *CalMesh::getSubmesh(int id)
   * @return The number of submeshes.
   *****************************************************************************/
 
-int CalMesh::getSubmeshCount()
+int CalMesh::getSubmeshCount() const
 {
   return m_vectorSubmesh.size();
 }
@@ -134,6 +172,20 @@ int CalMesh::getSubmeshCount()
   *****************************************************************************/
 
 std::vector<CalSubmesh *>& CalMesh::getVectorSubmesh()
+{
+  return m_vectorSubmesh;
+}
+
+ /*****************************************************************************/
+/** Returns the submesh vector.
+  *
+  * This function returns the vector that contains all submeshes of the mesh
+  * instance.
+  *
+  * @return A reference to the submesh vector.
+  *****************************************************************************/
+
+const std::vector<CalSubmesh *>& CalMesh::getVectorSubmesh() const
 {
   return m_vectorSubmesh;
 }
@@ -165,7 +217,7 @@ void CalMesh::setLodLevel(float lodLevel)
   * @param setId The ID of the material set.
   *****************************************************************************/
 
-void CalMesh::setMaterialSet(int setId)
+void CalMesh::setMaterialSet(int setId,CalCoreModel*core)
 {
   // change material of every submesh
   int submeshId;
@@ -177,25 +229,14 @@ void CalMesh::setMaterialSet(int setId)
 
     // get the core material id for the given set id in the material thread
     int coreMaterialId;
-    coreMaterialId = m_pModel->getCoreModel()->getCoreMaterialId(coreMaterialThreadId, setId);
+	coreMaterialId = core->getCoreMaterialId(coreMaterialThreadId, setId);
 
     // set the new core material id in the submesh
     m_vectorSubmesh[submeshId]->setCoreMaterialId(coreMaterialId);
   }
 }
 
- /*****************************************************************************/
-/** Sets the model.
-  *
-  * This function sets the model to which the mesh instance is attached to.
-  *
-  * @param pModel The model to which the mesh instance should be attached to.
-  *****************************************************************************/
 
-void CalMesh::setModel(CalModel *pModel)
-{
-  m_pModel = pModel;
-}
 
 /*****************************************************************************/
 /** Disable internal data (and thus springs system)

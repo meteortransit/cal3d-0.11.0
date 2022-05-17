@@ -8,8 +8,10 @@
 // your option) any later version.                                            //
 //****************************************************************************//
 
+#ifndef WIN32
 #ifdef HAVE_CONFIG_H
 #include "config.h"
+#endif
 #endif
 
 //****************************************************************************//
@@ -20,6 +22,7 @@
 #include "cal3d/matrix.h"
 #include "cal3d/quaternion.h"
 
+using namespace cal3d;
  /*****************************************************************************/
 /** Constructs the vector instance.
   *
@@ -430,12 +433,12 @@ void CalVector::set(float vx, float vy, float vz)
   *****************************************************************************/
   
   
-float CalPlane::eval(CalVector &p)
+float CalPlane::eval(const CalVector &p)
 {
    return p.x*a+p.y*b+p.z*c+d;
 }
 
-void CalPlane::setPosition(CalVector &p)
+void CalPlane::setPosition(const CalVector &p)
 {
    d=-p.x*a-p.y*b-p.z*c;
 }
@@ -463,7 +466,7 @@ float CalPlane::dist(CalVector &p)
   *****************************************************************************/
 
 
-void CalBoundingBox::computePoints(CalVector *p)
+void CalBoundingBox::computePoints(CalVector *p)const
 {
     CalMatrix m;
      

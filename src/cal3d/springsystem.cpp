@@ -21,19 +21,21 @@
 #include "cal3d/coremodel.h"
 #include "cal3d/model.h"
 #include "cal3d/mesh.h"
+#include "cal3d/physique.h"
 #include "cal3d/submesh.h"
 #include "cal3d/skeleton.h"
 #include "cal3d/bone.h"
 #include "cal3d/coresubmesh.h"
 #include "cal3d/vector.h"
 
+using namespace cal3d;
  /*****************************************************************************/
 /** Constructs the spring system instance.
   *
   * This function is the default constructor of the spring system instance.
   *****************************************************************************/
 
-CalSpringSystem::CalSpringSystem(CalModel* pModel)
+CalSpringSystem::CalSpringSystem(CalModel *pModel)
 {
   assert(pModel);
   m_pModel = pModel;
@@ -58,6 +60,7 @@ CalSpringSystem::CalSpringSystem(CalModel* pModel)
 
 void CalSpringSystem::calculateForces(CalSubmesh *pSubmesh, float deltaTime)
 {
+#pragma unused( deltaTime )
   // get the vertex vector of the submesh
   std::vector<CalVector>& vectorVertex = pSubmesh->getVectorVertex();
 
@@ -134,7 +137,7 @@ void CalSpringSystem::calculateVertices(CalSubmesh *pSubmesh, float deltaTime)
 		
 		if(m_collision)
 		{
-			std::vector<CalBone *> &m_vectorbone =  pSkeleton->getVectorBone();
+			const std::vector<CalBone *> &m_vectorbone =  pSkeleton->getVectorBone();
 			
 			for(size_t boneId=0; boneId < m_vectorbone.size(); boneId++)
 			{
@@ -301,6 +304,53 @@ void CalSpringSystem::calculateVertices(CalSubmesh *pSubmesh, float deltaTime)
 *********************************/
 }
 
+ /*****************************************************************************/
+/** Reset the spring system.
+  *
+  * Reset the vertex positions of the vertices to where they would be if their
+  * submesh was not springy.
+  *****************************************************************************/
+
+void CalSpringSystem::resetPositions()
+{
+	CalPhysique*	thePhysique = m_pModel->getPhysique();
+
+	// get the attached meshes vector
+	std::vector<CalMesh *>& vectorMesh = m_pModel->getVectorMesh();
+
+	// loop through all the attached meshes
+	std::vector<CalMesh *>::iterator iteratorMesh;
+	for(iteratorMesh = vectorMesh.begin(); iteratorMesh != vectorMesh.end(); ++iteratorMesh)
+	{
+		// get the submesh vector of the mesh
+		std::vector<CalSubmesh *>& vectorSubmesh = (*iteratorMesh)->getVectorSubmesh();
+
+		// loop through all the submeshes of the mesh
+		std::vector<CalSubmesh *>::iterator iteratorSubmesh;
+		for(iteratorSubmesh = vectorSubmesh.begin(); iteratorSubmesh != vectorSubmesh.end(); ++iteratorSubmesh)
+		{
+			CalSubmesh*	theSubmesh = *iteratorSubmesh;
+
+			// check if the submesh contains a spring system
+			if (theSubmesh->getCoreSubmesh()->getSpringCount() > 0 && theSubmesh->hasInternalData())
+			{
+				const int kNumVert = theSubmesh->getVertexCount();
+				std::vector<CalVector>&		vectorVertex( theSubmesh->getVectorVertex() );
+				vectorVertex.resize( kNumVert );
+				thePhysique->calculateVertices( theSubmesh, &vectorVertex[0].x );
+				
+				std::vector<CalSubmesh::PhysicalProperty>&	vectorPhysProp(
+					theSubmesh->getVectorPhysicalProperty() );
+				
+				for (int i = 0; i < kNumVert; ++i)
+				{
+					vectorPhysProp[i].position = vectorVertex[i];
+					vectorPhysProp[i].positionOld = vectorVertex[i];
+				}
+			}
+		}
+	}	
+}
 
  /*****************************************************************************/
 /** Updates all the spring systems in the attached meshes.
@@ -337,70 +387,3 @@ void CalSpringSystem::update(float deltaTime)
   }
 }
 
-
- /*****************************************************************************/
-/** Returns the gravity vector.
-  *
-  * This function returns the gravity vector of the spring system instance.
-  *
-  * @return the gravity vector as vector.
-  *****************************************************************************/
-
-CalVector & CalSpringSystem::getGravityVector()
-{
-	return m_vGravity;
-}
-
- /*****************************************************************************/
-/** Returns the force vector.
-  *
-  * This function returns the force vector of the spring system instance.
-  *
-  * @return the force vector as vector.
-  *****************************************************************************/
-
-
-CalVector & CalSpringSystem::getForceVector()
-{
-	return m_vForce;
-}
-
- /*****************************************************************************/
-/** Sets the gravity vector.
-  *
-  * This function sets the gravity vector of the spring system instance.
-  *
-  * @param vGravity the gravity vector as vector.
-  *****************************************************************************/
-
-void CalSpringSystem::setGravityVector(const CalVector & vGravity)
-{
-	m_vGravity = vGravity;
-}
-
- /*****************************************************************************/
-/** Sets the force vector.
-  *
-  * This function sets the force vector of the spring system instance.
-  *
-  * @param vForce the force vector as vector.
-  *****************************************************************************/
-
-void CalSpringSystem::setForceVector(const CalVector & vForce)
-{
-	m_vForce = vForce;
-}
-
- /*****************************************************************************/
-/** Enable or disable the collision system
-  *
-  * @param collision true to enable the collision system else false
-  *****************************************************************************/
-
-void CalSpringSystem::setCollisionDetection(bool collision)
-{
-	m_collision=collision;
-}
-
-
-//****************************************************************************//

@@ -22,7 +22,7 @@
 //----------------------------------------------------------------------------//
 
 #define MAXBONESPERMESH 29
-
+using namespace cal3d;
 class Viewer
 {
 // member variables

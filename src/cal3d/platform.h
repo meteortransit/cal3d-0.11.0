@@ -15,9 +15,10 @@
 // Compiler configuration                                                     //
 //****************************************************************************//
 
-#if defined(_WIN32) && !defined(__MINGW32__) && !defined(__CYGWIN__)
+#if (defined(_WIN32) && _MSC_VER < 1900) && !defined(__MINGW32__) && !defined(__CYGWIN__)
 #pragma warning(disable : 4251)
 #pragma warning(disable : 4786)
+#define snprintf _snprintf
 #endif
 
 #if !defined(_WIN32) || defined(__MINGW32__) || defined(__CYGWIN__)
@@ -90,39 +91,39 @@ typedef int intptr_t;
 #include <list>
 #include <map>
 
-//****************************************************************************//
-// Class declaration                                                          //
-//****************************************************************************//
+namespace cal3d{
+	/*****************************************************************************/
+	/** The platform class.
+	  *****************************************************************************/
 
- /*****************************************************************************/
-/** The platform class.
-  *****************************************************************************/
+	class CAL3D_API CalPlatform
+	{
+		// constructors/destructor
+	protected:
+		CalPlatform();
+		virtual ~CalPlatform();
 
-class CAL3D_API CalPlatform
-{
-// constructors/destructor
-protected:
-  CalPlatform();
-  virtual ~CalPlatform();
+		// member functions	
+	public:
+		static bool readBytes(std::istream& input, void *pBuffer, int length);
+		static bool readFloat(std::istream& input, float& value);
+		static bool readShort(std::istream& input, short& value);
+		static bool readInteger(std::istream& input, int& value);
+		static bool readString(std::istream& input, std::string& strValue);
 
-// member functions	
-public:
-  static bool readBytes(std::istream& input, void *pBuffer, int length);
-  static bool readFloat(std::istream& input, float& value);
-  static bool readInteger(std::istream& input, int& value);
-  static bool readString(std::istream& input, std::string& strValue);
+		static bool readBytes(char* input, void *pBuffer, int length);
+		static bool readFloat(char* input, float& value);
+		static bool readShort(char* input, short& value);
+		static bool readInteger(char* input, int& value);
+		static bool readString(char* input, std::string& strValue);
 
-  static bool readBytes(char* input, void *pBuffer, int length);
-  static bool readFloat(char* input, float& value);
-  static bool readInteger(char* input, int& value);
-  static bool readString(char* input, std::string& strValue);
-
-  static bool writeBytes(std::ostream& output, const void *pBuffer, int length);
-  static bool writeFloat(std::ostream& output, float value);
-  static bool writeInteger(std::ostream& output, int value);
-  static bool writeString(std::ostream& output, const std::string& strValue);
-};
-
+		static bool writeBytes(std::ostream& output, const void *pBuffer, int length);
+		static bool writeFloat(std::ostream& output, float value);
+		static bool writeShort(std::ostream& output, short value);
+		static bool writeInteger(std::ostream& output, int value);
+		static bool writeString(std::ostream& output, const std::string& strValue);
+	};
+}
 #endif
 
 //****************************************************************************//

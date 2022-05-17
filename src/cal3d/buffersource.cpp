@@ -19,6 +19,7 @@
 #include "cal3d/buffersource.h"
 #include "cal3d/error.h"
 
+using namespace cal3d;
  /*****************************************************************************/
 /** Constructs a buffer source instance from an existing memory buffer.
   *
@@ -27,7 +28,7 @@
   * @param inputBuffer The input buffer to read from
   *****************************************************************************/
 
-CalBufferSource::CalBufferSource(void* inputBuffer)
+CalBufferSource::CalBufferSource(void *inputBuffer)
   : mInputBuffer(inputBuffer), mOffset(0)
 {
 }
@@ -81,10 +82,10 @@ void CalBufferSource::setError() const
   *
   * @return One of the following values:
   *         \li \b true if successful
-  *         \li \b false if an error happend
+  *         \li \b false if an error happened
   *****************************************************************************/
 
-bool CalBufferSource::readBytes(void* pBuffer, int length)
+bool CalBufferSource::readBytes(void *pBuffer, int length)
 {
    //Check that the buffer and the target are usable
    if (!ok() || (pBuffer == NULL)) return false;
@@ -104,7 +105,7 @@ bool CalBufferSource::readBytes(void* pBuffer, int length)
   *
   * @return One of the following values:
   *         \li \b true if successful
-  *         \li \b false if an error happend
+  *         \li \b false if an error happened
   *****************************************************************************/
 
 bool CalBufferSource::readFloat(float& value)
@@ -119,6 +120,29 @@ bool CalBufferSource::readFloat(float& value)
 }
 
  /*****************************************************************************/
+/** Reads a short.
+  *
+  * This function reads a short from this data source.
+  *
+  * @param value A reference to the short into which the data is read.
+  *
+  * @return One of the following values:
+  *         \li \b true if successful
+  *         \li \b false if an error happened
+  *****************************************************************************/
+
+bool CalBufferSource::readShort(short& value)
+{
+   //Check that the buffer is usable
+   if (!ok()) return false;
+
+   bool result = CalPlatform::readShort( ((char*)mInputBuffer+mOffset), value );
+   mOffset += 2;
+
+   return result;
+}
+
+ /*****************************************************************************/
 /** Reads an integer.
   *
   * This function reads an integer from this data source.
@@ -127,7 +151,7 @@ bool CalBufferSource::readFloat(float& value)
   *
   * @return One of the following values:
   *         \li \b true if successful
-  *         \li \b false if an error happend
+  *         \li \b false if an error happened
   *****************************************************************************/
 
 bool CalBufferSource::readInteger(int& value)
@@ -150,7 +174,7 @@ bool CalBufferSource::readInteger(int& value)
   *
   * @return One of the following values:
   *         \li \b true if successful
-  *         \li \b false if an error happend
+  *         \li \b false if an error happened
   *****************************************************************************/
 
 bool CalBufferSource::readString(std::string& strValue)

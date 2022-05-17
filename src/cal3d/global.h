@@ -11,14 +11,6 @@
 #ifndef CAL_GLOBAL_H
 #define CAL_GLOBAL_H
 
-//****************************************************************************//
-// Includes                                                                   //
-//****************************************************************************//
-
-// autoconf/automake includes
-#ifdef HAVE_CONFIG_H
-#include <config.h>
-#endif
 
 // platform dependent includes
 #include "cal3d/platform.h"
@@ -31,10 +23,10 @@
 
 //#define CAL_16BIT_INDICES
 
-#ifdef CAL_16BIT_INDICES 
-typedef unsigned short CalIndex; 
-#else 
-typedef int CalIndex; 
+#ifdef CAL_16BIT_INDICES
+typedef unsigned short CalIndex;
+#else
+typedef int CalIndex;
 #endif
 
 
@@ -43,43 +35,67 @@ typedef int CalIndex;
 //****************************************************************************//
 
 namespace cal3d
-{  
+{
   // global typedefs
   typedef void *UserData;
 
   // file magic cookies
   const char SKELETON_FILE_MAGIC[4]  = { 'C', 'S', 'F', '\0' };
   const char ANIMATION_FILE_MAGIC[4] = { 'C', 'A', 'F', '\0' };
+  const char ANIMATEDMORPH_FILE_MAGIC[4] = { 'C', 'P', 'F', '\0' };
   const char MESH_FILE_MAGIC[4]      = { 'C', 'M', 'F', '\0' };
   const char MATERIAL_FILE_MAGIC[4]  = { 'C', 'R', 'F', '\0' };
 
   const char SKELETON_XMLFILE_MAGIC[4]  = { 'X', 'S', 'F', '\0' };
-  const char ANIMATION_XMLFILE_MAGIC[4]  = { 'X', 'A', 'F', '\0' };
-  const char MESH_XMLFILE_MAGIC[4]  = { 'X', 'M', 'F', '\0' };
+  const char ANIMATION_XMLFILE_MAGIC[4] = { 'X', 'A', 'F', '\0' };
+  const char MESH_XMLFILE_MAGIC[4]      = { 'X', 'M', 'F', '\0' };
   const char MATERIAL_XMLFILE_MAGIC[4]  = { 'X', 'R', 'F', '\0' };
 
-  // library version       // 0.11.0
-  const int LIBRARY_VERSION = 1100;
+  // library version       // 0.13.0
+#define CAL3D_VERSION 1301
+  const int LIBRARY_VERSION = CAL3D_VERSION;
+
 
   // file versions
   const int CURRENT_FILE_VERSION = LIBRARY_VERSION;
   const int EARLIEST_COMPATIBLE_FILE_VERSION = 699;
 
+  const int FIRST_FILE_VERSION_WITH_ANIMATION_COMPRESSION6 = 1300;
+  const int FIRST_FILE_VERSION_WITH_ANIMATION_COMPRESSION5 = 1300;
+  const int FIRST_FILE_VERSION_WITH_ANIMATION_COMPRESSION4 = 1300;
+  const int FIRST_FILE_VERSION_WITH_ANIMATION_COMPRESSION = 1300;
+  const int FIRST_FILE_VERSION_WITH_VERTEX_COLORS = 91300;//removed from spec (one would require both mesh type vertex color and texture color
+  const int FIRST_FILE_VERSION_WITH_VERTEX_SLAVES_ATTRIBUTES = 1400;//to implement (more generic than vertex color) all atribute that doesnt have semantic (not in[vertex,normal,tangent,physics) in cal3d but interpole linearly (color and others stuff)
+
+  const int FIRST_FILE_VERSION_WITH_NODE_LIGHTS = 91300;//removed
+  const int FIRST_FILE_VERSION_WITH_MATERIAL_TYPES = 1300;
+  const int FIRST_FILE_VERSION_WITH_MORPH_TARGETS_IN_MORPH_FILES = 1300;
+  const int FIRST_FILE_VERSION_WITH_RELATIVE_BONE_TRANSLATION = 1300;
+  const int FIRST_FILE_VERSION_WITH_UPDATED_MORPHMIXER = 1301;
+
+  inline bool versionHasCompressionFlag(int version) {
+    return version >= 1300;
+  }
   /**
    * Derive from noncopyable to mark your class as not having a copy
    * constructor or operator=
    */
-  class CAL3D_API noncopyable
+  class CAL3D_API NonCopyable
   {
   protected:
-    noncopyable() {}
-    ~noncopyable() {}
+	  NonCopyable() {}
+	  ~NonCopyable() {}
   private:  // emphasize the following members are private
-    noncopyable(const noncopyable&);
-    const noncopyable& operator=(const noncopyable&);
+	  NonCopyable(const NonCopyable&);
+	  const NonCopyable& operator=(const NonCopyable&);
   };
 }
 
+struct CalHeader
+{
+  int version;
+  char const* magic;
+};
 namespace Cal = cal3d;
 
 #endif

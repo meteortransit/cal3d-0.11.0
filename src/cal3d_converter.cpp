@@ -10,6 +10,8 @@
 //****************************************************************************//
 
 #include "cal3d/cal3d.h"
+#include "cal3d/cal3d_wrapper.h"
+using namespace cal3d;
 
 #define SKELETON 0
 #define MESH 1
